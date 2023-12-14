@@ -12,40 +12,40 @@ interface Exp {
   label: string
   value: string
 }
-interface ExpItemProps {
-  item: Exp
-}
+// interface ExpItemProps {
+//   item: Exp
+// }
 
-const exps: Array<Exp> = [
-  {
-    label: 'Students',
-    value: '10K+',
-  },
-  {
-    label: 'Quality Course',
-    value: '20+',
-  },
-  {
-    label: 'Experience Mentors',
-    value: '10+',
-  },
-]
+// const exps: Array<Exp> = [
+//   {
+//     label: 'Students',
+//     value: '10K+',
+//   },
+//   {
+//     label: 'Quality Course',
+//     value: '20+',
+//   },
+//   {
+//     label: 'Experience Mentors',
+//     value: '10+',
+//   },
+// ]
 
-const ExpItem: FC<ExpItemProps> = ({ item }) => {
-  const { value, label } = item
-  return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
-      <Typography
-        sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
-      >
-        {value}
-      </Typography>
-      <Typography color="text.secondary" variant="h5">
-        {label}
-      </Typography>
-    </Box>
-  )
-}
+// const ExpItem: FC<ExpItemProps> = ({ item }) => {
+//   const { value, label } = item
+//   return (
+//     <Box sx={{ textAlign: 'center',mb: { xs: 1, md: 0 } }}>
+//       <Typography
+//         sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
+//       >
+//         {value}
+//       </Typography>
+//       <Typography color="text.secondary" variant="h5">
+//         {label}
+//       </Typography>
+//     </Box>
+//   )
+// }
 
 const HomeHero: FC = () => {
   return (
@@ -83,7 +83,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    Improve{' '}
+                    Innovate{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -97,7 +97,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  your{' '}
+                  Integrate{' '}
                   <Typography
                     component="span"
                     sx={{
@@ -112,8 +112,9 @@ const HomeHero: FC = () => {
                         height: 'auto',
                       },
                     }}
+                    // Innovate. Integrate. Elevate. Securely Infused with Smart ERP Solutions
                   >
-                    Skill
+                    Elevate
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path
@@ -132,13 +133,12 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                  with Different Way
-                </Typography>
+                 with Smart ERP Solutions                </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
+                    "Sculpt the future of your enterprise with our cutting-edge ERP solution, seamlessly blending AI prowess with unparalleled security. From meticulous financial management and inventory control to dynamic sales, purchases, and streamlined point-of-sale experiences, our comprehensive platform ensures efficiency, innovation, and prosperity, all in one integrated package."
                   }
                 </Typography>
               </Box>
@@ -158,7 +158,7 @@ const HomeHero: FC = () => {
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Sertificate badge */}
-            <Box
+            {/*  <Box
               sx={{
                 position: 'absolute',
                 bottom: 30,
@@ -174,7 +174,7 @@ const HomeHero: FC = () => {
                 width: 280,
               }}
             >
-              <Box
+               <Box
                 sx={{
                   boxShadow: 1,
                   borderRadius: '50%',
@@ -200,23 +200,25 @@ const HomeHero: FC = () => {
                   There are certificates for all courses.
                 </Typography>
               </Box>
-            </Box>
+            </Box> */}
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+              <Image src="/images/erp-image.jpg" width={775} height={787} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
 
         {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
+        
+        {/* <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
           <Grid container spacing={2}>
             {exps.map((item) => (
               <Grid key={item.value} item xs={12} md={4}>
-                <ExpItem item={item} />
+               <ExpItem item={item} />*
               </Grid>
             ))}
           </Grid>
-        </Box>
+        </Box> */}
+
       </Container>
     </Box>
   )

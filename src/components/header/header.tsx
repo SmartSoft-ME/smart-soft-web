@@ -4,7 +4,7 @@ import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
+import { Navigation, /*AuthNavigation*/ } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
 
@@ -42,10 +42,11 @@ const Header: FC = () => {
                 left: 0,
               }),
             }}
+            /*<AuthNavigation /> lezm ten7at ba3ed navigation components*/
           >
             <Box /> {/* Magic space */}
             <Navigation />
-            <AuthNavigation />
+            
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
