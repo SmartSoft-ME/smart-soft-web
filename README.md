@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/hiriski/coursespace-landing-page">
-   Smart Soft
+   Smart Soft Web
   </a>
   <br />
 </h1>
