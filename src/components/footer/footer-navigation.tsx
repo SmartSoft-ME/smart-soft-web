@@ -28,10 +28,10 @@ const courseMenu: Array<Navigation> = [
 const pageMenu = headerNavigations
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
+  { label: 'Contact Us', path: '../../contacUs' },
+  { label: 'Privacy & Policy', path: '../../privacy&Policy' },
+  { label: 'Term & Condition', path: '../../term&Condition' },
+  { label: 'FAQ', path: '../../faq'},
 ]
 
 interface NavigationItemProps {
@@ -56,15 +56,15 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   )
 }
 
+{`<Grid item xs={12} md={4}>
+<FooterSectionTitle title="Course" />
+{courseMenu.map(({ label, path }, index) => (
+  <NavigationItem key={index + path} label={label} path={/* path */ '#'} />
+))}
+</Grid>`}
 const FooterNavigation: FC = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} md={4}>
-        <FooterSectionTitle title="Course" />
-        {courseMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={/* path */ '#'} />
-        ))}
-      </Grid>
       <Grid item xs={12} md={4}>
         <FooterSectionTitle title="Menu" />
         {pageMenu.map(({ label, path }, index) => (

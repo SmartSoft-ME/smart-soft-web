@@ -7,7 +7,7 @@ import { StyledButton } from '../styled-button'
 
 const HomeNewsLetter: FC = () => {
   return (
-    <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
+    <Box sx={{ backgroundColor: 'red', py: { xs: 8, md: 10 } }}>{/*background.paper*/}
       <Container>
         <Box
           sx={{

@@ -16,10 +16,10 @@ const Footer: FC = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
-                Coursespace
+              SmartSoft
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Coursespace is an online learning platform that has been operating since 2018 until now.
+              SmartSoft, a leading smart ERP solution provider, has been at the forefront of innovation, continually shaping the future of efficient business operations.
               </Typography>
               <FooterSocialLinks />
             </Box>

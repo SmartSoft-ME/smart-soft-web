@@ -5,6 +5,7 @@ import Rating from '@mui/material/Rating'
 import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
 import ArrowForward from '@mui/icons-material/ArrowForward'
+import { useRouter } from 'next/router'
 import { Course } from '@/interfaces/course'
 
 interface Props {
@@ -12,6 +13,27 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
+
+  const router = useRouter();
+
+  const handleCardClick = (id: number | string) => {
+    let pagePath;
+    switch (id) {
+      case 1:
+        pagePath = '/inventory';
+        break;
+      case 2:
+        pagePath = '/accounting'; 
+        break;
+      case 3:
+        pagePath = '/invoicing'; 
+        break;
+      default:
+        pagePath = '/';
+    }
+  
+    router.push(pagePath);
+  };
   return (
     <Box
       sx={{
@@ -64,9 +86,11 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             <Typography variant="h6">/ course</Typography>
           </Box>
           <IconButton
+
             color="primary"
             sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
-          >
+            onClick={() => handleCardClick(item.id)}
+         >
             <ArrowForward />
           </IconButton>
         </Box>
