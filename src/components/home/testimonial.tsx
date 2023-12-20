@@ -67,7 +67,7 @@ const HomeTestimonial: FC = () => {
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
-            <Typography
+            {/* <Typography
               component="h2"
               sx={{
                 position: 'relative',
@@ -77,9 +77,9 @@ const HomeTestimonial: FC = () => {
                 lineHeight: 1,
                 fontWeight: 'bold',
               }}
-            >
-              Diverse solutions {' '}
-              <Typography
+            > */}
+              Diverse solutions for your business{' '}
+              {/* <Typography
                 component="mark"
                 sx={{
                   position: 'relative',
@@ -89,7 +89,7 @@ const HomeTestimonial: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                for your business{' '}
+                for your business{' '} */}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -101,8 +101,8 @@ const HomeTestimonial: FC = () => {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
-              </Typography>
-            </Typography>
+              {/* </Typography>
+            </Typography> */}
 
             <StyledSlickContainer>
               <Slider ref={sliderRef} {...sliderConfig}>

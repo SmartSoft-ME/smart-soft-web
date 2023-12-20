@@ -1,23 +1,27 @@
 import React, { FC, useState } from 'react'
 import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import IconButton from '@mui/material/IconButton'
+import { Container } from '@mui/material'
+import { NavigationInvetnory } from '../navigationInventory'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { Logo } from '@/components/logo'
-import { Navigation, /*AuthNavigation*/ } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
+import IconButton from '@mui/material/IconButton'
+import { Logo } from '../logo'
 
-const Header: FC = () => {
-  const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
-  return (
-    <Box>
-      <Container sx={{ py: { xs: 2, md: 3 } , }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',}}>
-          <Logo />
+
+
+
+const HeaderInventory:FC =()=>{
+    const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
+    const { breakpoints } = useTheme()
+    const matchMobileView = useMediaQuery(breakpoints.down('md'))
+
+return (
+    <Box >
+      <Container sx={{ py: { xs: 2, md: 3 } }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+        <Logo />
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }}}>
             <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
               <Menu />
@@ -30,7 +34,6 @@ const Header: FC = () => {
               alignItems: 'center',
               justifyContent: 'space-between',
               flexDirection: { xs: 'column', md: 'row' },
-    
               transition: (theme) => theme.transitions.create(['top']),
               ...(matchMobileView && {
                 py: 6,
@@ -42,10 +45,9 @@ const Header: FC = () => {
                 left: 0,
               }),
             }}
-            /*<AuthNavigation /> lezm ten7at ba3ed navigation components*/
           >
-            <Box /> {/* Magic space */}
-            <Navigation />
+            <Box /> 
+            <NavigationInvetnory />
             
             {visibleMenu && matchMobileView && (
               <IconButton
@@ -62,8 +64,7 @@ const Header: FC = () => {
           </Box>
         </Box>
       </Container>
-    </Box>
-  )
+    </Box>  
+    )
 }
-
-export default Header
+export default HeaderInventory

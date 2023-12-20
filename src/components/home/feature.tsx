@@ -153,7 +153,7 @@ const HomeFeature: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Empower Your Business Mastery{' '}
+              Empower Your Business Mastery {' '}
               <Typography
                 component="mark"
                 sx={{

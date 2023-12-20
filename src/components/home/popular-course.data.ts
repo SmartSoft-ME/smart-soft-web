@@ -6,17 +6,17 @@ export const data: Array<Course> = [
     cover: '/images/inventory.jpg',
     title: 'Smart inventory',
     rating: 5,
-    ratingCount: 8,
-    price: 25,
+    // ratingCount: 8,
+    // price: 25,
     category: 'Beginner',
   },
   {
     id: 2,
     cover: '/images/courses/accounting.jpg',
-    title: 'Smart Accountig',
+    title: 'Smart accounting',
     rating: 4,
-    ratingCount: 7,
-    price: 30,
+    // ratingCount: 7,
+    // price: 30,
     category: 'Beginner',
   },
   {
@@ -24,8 +24,8 @@ export const data: Array<Course> = [
     cover: '/images/invoicing.jpg',
     title: 'Smart invoicing',
     rating: 4,
-    ratingCount: 7,
-    price: 30,
+    // ratingCount: 7,
+    // price: 30,
     category: 'Beginner',
   }
 ]

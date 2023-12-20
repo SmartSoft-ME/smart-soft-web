@@ -12,7 +12,7 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
+    title: 'Easy Accessible',
     description: 'Experience seamless accessibility anytime, anywhere – your app, your control, at your fingertips.',
     icon: <ArtTrackIcon />,
   },
@@ -22,7 +22,7 @@ export const data: Data[] = [
     icon: <AttachMoneyIcon />,
   },
   {
-    title: 'FUnified Expertise: The Ultimate Solution',
+    title: 'Unified Expertise: The Ultimate Solution',
     description: 'Our ERP specialists converge to craft a tailored, all-encompassing platform. From financing to accounting, invoicing to inventory, experience a unified approach to excellence, designed to elevate your business journey',
     icon: <LocalLibraryIcon />,
   },

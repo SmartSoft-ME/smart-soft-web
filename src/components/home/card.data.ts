@@ -3,16 +3,16 @@ export const data: Array<Cards> = [
   {
     id: 1,
     title: ' Light smart erp',
-    price: '300$',
+    price: '1500$',
   },
   {
     id: 2,
     title: 'Basic smart ERP',
-    price: '500$',
+    price: '3000$',
   },
   {
     id: 3,
     title: 'Enterprise smart ERP',
-    price: '600$',
+    price: 'XXX$',
   },
 ]
