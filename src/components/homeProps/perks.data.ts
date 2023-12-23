@@ -1,5 +1,5 @@
 import type { Perks } from "@/interfaces/perks";
-export const perksData: Perks[]=[
+export const perksDatad: Perks[]=[
     {
         logoSrc: "/images/perks/realtime.svg",
         title: "Collaborate seamlessly as one team in real time",

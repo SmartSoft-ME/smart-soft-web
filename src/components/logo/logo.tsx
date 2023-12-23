@@ -2,16 +2,26 @@ import React, { FC } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 
-interface Props {
+interface LogoProps {
   onClick?: () => void;
   variant?: 'primary' | 'secondary';
 }
 
-const Logo: FC<Props> = ({ onClick, variant }) => {
+const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   const router = useRouter();
 
-  // Check if the current path contains 'inventory'
   const isInventoryPath = router.pathname.includes('inventory');
+  const isAccountingPath = router.pathname.includes('accounting');
+  const isInvoicingPath = router.pathname.includes('invoicing');
+
+  let logoText = 'Smartsoft';
+  if (isInventoryPath) {
+    logoText = 'SmartInventory';
+  } else if (isAccountingPath) {
+    logoText = 'SmartAccounting';
+  } else if (isInvoicingPath) {
+    logoText = 'SmartInvoicing';
+  }
 
   return (
     <Box onClick={onClick} style={{ cursor: 'pointer' }}>
@@ -25,7 +35,7 @@ const Logo: FC<Props> = ({ onClick, variant }) => {
           },
         }}
       >
-        {isInventoryPath ? 'SmartInventory' : 'Smartsoft'}
+        {logoText}
       </Typography>
     </Box>
   );

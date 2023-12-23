@@ -5,12 +5,17 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import { perksData } from './perks.data';
 import {Perks} from '../../interfaces/perks'
+import type { perksDatap } from "@/interfaces/perksData";
+import { perksDatad } from './perks.data';
+
 interface PerkProps {
   perk: Perks ;
+  
 }
-
+interface PerksDatap {
+  perksdatatp : perksDatap
+}
 const Perk: FC<PerkProps> = ({ perk }) => {
   return (
     <Grid item xs={12} sm={6} md={3}>
@@ -27,16 +32,18 @@ const Perk: FC<PerkProps> = ({ perk }) => {
   );
 };
 
-const Perks: FC = () => {
+const Perks: FC<PerksDatap> = ({perksdatatp}) => {
   return (
-    <Box sx={{ backgroundColor: 'lightgray', py: { xs: 6, md: 8 } }}>
+    <Box
+    id="Section2"
+    sx={{ backgroundColor: 'lightgray', py: { xs: 6, md: 8 } }}>
       <Container>
-        <Typography variant="h2" sx={{ textAlign: 'center', mb: 4 }}>The perks of</Typography>
+        <Typography variant="h2" sx={{ textAlign: 'center', mb: 4 }}>{perksdatatp.title}</Typography>
         <Typography variant="body1" sx={{ textAlign: 'center', mb: 4 }}>
-          Eliminate idle periods with a solution that enables you to monitor and optimize all your workflows. Allocate your time to concentrate on your teams, customers, and the growth of your business.
+          {perksdatatp.subtitle}
         </Typography>
         <Grid container spacing={4}>
-          {perksData.map((perk, index) => (
+          {perksDatad.map((perk, index) => (
             <Perk key={index} perk={perk} />
           ))}
         </Grid>

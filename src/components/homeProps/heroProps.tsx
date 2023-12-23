@@ -6,10 +6,15 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
+import type { HeroData } from '@/interfaces/heroData'
 
-const HomeHeroInventory: FC = () => {
+
+interface HomeHeroData{
+  herodata:HeroData
+}
+const HomeHero: FC<HomeHeroData> = ({herodata}) => {
   return (
-    <Box id="heroInventory" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } , height: '80vh'}}>
+    <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } , height: '80vh'}}>
       <Container maxWidth="xl">
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column'} }}>
           <Grid item xs={12}>
@@ -34,21 +39,18 @@ const HomeHeroInventory: FC = () => {
                     lineHeight: 1.3,
                   }}
                 >
-                    Smart Inventory Features  
+                    {herodata.title}  
             </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
               <Typography variant="h3" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
-                     Enhance your decision-making agility for quicker and more intelligent choices.
+                    {herodata.subtitle}
                 </Typography>
               </Box>
               <Box sx={{ mb: 8, width: { xs: '100%', md: '100%' } }}>
                 <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 }}>
                   
-                      The smart inventory system boasts advanced features, including real-time management of current stock levels,
-                      seamless handling of receipts and deliveries, and comprehensive reporting capabilities for streamlined inventory
-                      oversight.
-                  
+                  {herodata.paragraph}                  
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
@@ -66,4 +68,4 @@ const HomeHeroInventory: FC = () => {
   )
 }
 
-export default HomeHeroInventory
+export default HomeHero

@@ -1,11 +1,21 @@
-import React from 'react';
-
-const SmartInvoicing: React.FC = () => {
+import React, { FC } from 'react'
+import dynamic from 'next/dynamic'
+import { NextPageWithLayout } from '@/interfaces/layout'
+import { LayoutInvoicing } from '@/components/layout/layoutInvoicing'
+import { HeroInvocing } from '@/components/homeProps/heroinvoicing'
+import { perksInvoicing } from '@/components/homeProps/perksInvoicing.data'
+const DynamicHomeHero = dynamic(() => import('.././components/homeProps/heroProps'))
+ const DynamicHomePerksInventory = dynamic(() => import('.././components/homeProps/perks'))
+const SmartAccounting: NextPageWithLayout = () => {
   return (
-    <div>
-      <h1>Smart Invoicing</h1>
-    </div>
-  );
-};
+    <>
+      <DynamicHomeHero herodata={HeroInvocing}/>
+      <DynamicHomePerksInventory perksdatatp={perksInvoicing}/>
 
-export default SmartInvoicing;
+    </>
+  )
+}
+
+SmartAccounting.getLayout = (page) => <LayoutInvoicing>{page}</LayoutInvoicing>
+export default SmartAccounting;
+
