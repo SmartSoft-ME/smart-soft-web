@@ -13,6 +13,11 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   const isInventoryPath = router.pathname.includes('inventory');
   const isAccountingPath = router.pathname.includes('accounting');
   const isInvoicingPath = router.pathname.includes('invoicing');
+  const isSaasPath = router.pathname.includes('saas');
+  const isPermisePath = router.pathname.includes('onPremise');
+  const isHybridPath = router.pathname.includes('hybrid');
+
+
 
   let logoText = 'Smartsoft';
   if (isInventoryPath) {
@@ -21,6 +26,13 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
     logoText = 'SmartAccounting';
   } else if (isInvoicingPath) {
     logoText = 'SmartInvoicing';
+  }
+  else if (isSaasPath) {
+    logoText = 'SaasERP';
+  } else if (isPermisePath) {
+    logoText = 'OnPermiseERP';
+  } else if (isHybridPath) {
+    logoText = 'HybridERP';
   }
 
   return (

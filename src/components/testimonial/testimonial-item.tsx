@@ -1,20 +1,43 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Testimonial } from '@/interfaces/testimonial'
+import Link from 'next/link'
 
 interface Props {
   item: Testimonial
 }
 
 const TestimonialItem: FC<Props> = ({ item }) => {
+     const getId = (id: number | string) => {
+      let pagePath;
+      switch (item.id) {
+        case 1:
+          pagePath = 'testimonial/saasErp';
+          break;
+        case 2:
+          pagePath = 'testimonial/onPremiseERP'; 
+          break;
+        case 3:
+          pagePath = 'testimonial/hybridERP'; 
+          break;
+        default:
+          pagePath = '/';
+      } 
+      return pagePath;
+    };
+
+    const pagePath=getId(item.id)
   return (
     <Box sx={{ padding: '30px' }}>
       <Box sx={{ mb: 2 }}>
+        <Link href={pagePath}>
         <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
           {item.title}
         </Typography>
+        </Link>
         <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.content}</Typography>
       </Box>
       <Box
@@ -30,33 +53,6 @@ const TestimonialItem: FC<Props> = ({ item }) => {
           backgroundColor: 'background.paper',
         }}
       >
-        <Box
-          sx={{
-            borderRadius: '50%',
-            height: 52,
-            width: 52,
-            overflow: 'hidden',
-            mr: 2,
-
-            '& img': {
-              width: '100%',
-            },
-          }}
-        >
-          <Image
-            src={`/images/avatars/${item.user.photo}`}
-            width={100}
-            height={100}
-            quality={97}
-            alt={item.user.name}
-          />
-        </Box>
-        <Box>
-          <Typography variant="h6">{item.user.name}</Typography>
-          <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
-            {item.user.professional}
-          </Typography>
-        </Box>
       </Box>
     </Box>
   )

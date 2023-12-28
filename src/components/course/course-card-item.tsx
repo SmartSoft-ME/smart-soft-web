@@ -16,6 +16,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
 
   const router = useRouter();
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleCardClick = (id: number | string) => {
     let pagePath;
     switch (id) {

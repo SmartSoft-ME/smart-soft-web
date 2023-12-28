@@ -93,7 +93,7 @@ const HomeOurCard: FC = () => {
     >
       <Container maxWidth="lg">
         <Typography variant="h1" sx={{ fontSize: 40 }}>
-          NewCards
+        Pricing
         </Typography>
 
         <Slider {...sliderConfig}>

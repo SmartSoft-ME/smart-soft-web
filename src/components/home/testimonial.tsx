@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { FC, useRef } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
@@ -9,6 +10,7 @@ import IconButton from '@mui/material/IconButton'
 import { styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
+import Link from 'next/link'
 
 import { TestimonialItem } from '@/components/testimonial'
 import { data } from './testimonial.data'
@@ -103,18 +105,20 @@ const HomeTestimonial: FC = () => {
                 </Box>
               {/* </Typography>
             </Typography> */}
-
+            
             <StyledSlickContainer>
               <Slider ref={sliderRef} {...sliderConfig}>
                 {data.map((item, index) => (
+                  // eslint-disable-next-line react/jsx-key
                   <TestimonialItem key={String(index)} item={item} />
+                  
                 ))}
               </Slider>
             </StyledSlickContainer>
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
+              <Image src="/images/solutions_imame.jpeg" width={520} height={400} quality={97} alt="Testimonial img" />
             </Box>
           </Grid>
         </Grid>
