@@ -5,39 +5,39 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Testimonial } from '@/interfaces/testimonial'
 import Link from 'next/link'
+import Button from '@mui/material/Button';
 
 interface Props {
   item: Testimonial
 }
 
 const TestimonialItem: FC<Props> = ({ item }) => {
-     const getId = (id: number | string) => {
-      let pagePath;
-      switch (item.id) {
-        case 1:
-          pagePath = 'testimonial/saasErp';
-          break;
-        case 2:
-          pagePath = 'testimonial/onPremiseERP'; 
-          break;
-        case 3:
-          pagePath = 'testimonial/hybridERP'; 
-          break;
-        default:
-          pagePath = '/';
-      } 
-      return pagePath;
-    };
+  const getId = (id: number | string) => {
+    let pagePath;
+    switch (item.id) {
+      case 1:
+        pagePath = 'testimonial/saasErp';
+        break;
+      case 2:
+        pagePath = 'testimonial/onPremiseERP'; 
+        break;
+      case 3:
+        pagePath = 'testimonial/hybridERP'; 
+        break;
+      default:
+        pagePath = '/';
+    } 
+    return pagePath;
+  };
 
-    const pagePath=getId(item.id)
+  const pagePath = getId(item.id);
+
   return (
     <Box sx={{ padding: '30px' }}>
       <Box sx={{ mb: 2 }}>
-        <Link href={pagePath}>
-        <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
-          {item.title}
-        </Typography>
-        </Link>
+          <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
+            {item.title}
+          </Typography>
         <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.content}</Typography>
       </Box>
       <Box
@@ -53,8 +53,14 @@ const TestimonialItem: FC<Props> = ({ item }) => {
           backgroundColor: 'background.paper',
         }}
       >
+        <Link href={pagePath}>
+          <Button variant="contained" color="primary">
+            More Details
+          </Button>
+        </Link>
       </Box>
     </Box>
   )
 }
-export default TestimonialItem
+
+export default TestimonialItem;

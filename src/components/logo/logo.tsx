@@ -28,7 +28,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
     logoText = 'SmartInvoicing';
   }
   else if (isSaasPath) {
-    logoText = 'SaasERP';
+    logoText = 'SaaSERP';
   } else if (isPermisePath) {
     logoText = 'OnPermiseERP';
   } else if (isHybridPath) {

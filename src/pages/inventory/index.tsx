@@ -9,6 +9,7 @@ const DynamicHomeHero = dynamic(() => import('../../components/homeProps/heroPro
 const SmartInventory: NextPageWithLayout = () => {
   return (
     <>
+    
       <DynamicHomeHero herodata={HeroInventory}/>
       <DynamicHomePerksInventory perksdatatp={perksInventory}/>
     </>

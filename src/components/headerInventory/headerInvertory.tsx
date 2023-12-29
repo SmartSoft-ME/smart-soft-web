@@ -6,7 +6,6 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
 import IconButton from '@mui/material/IconButton'
-import { Logo } from '../logo'
 
 const HeaderInventory:FC =()=>{
     const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -15,9 +14,8 @@ const HeaderInventory:FC =()=>{
 
 return (
     <Box >
-      <Container sx={{ py: { xs: 2, md: 3 } }}>
+      <Container sx={{ py: { xs: 2, md: 1 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-        <Logo />
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }}}>
             <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
               <Menu />

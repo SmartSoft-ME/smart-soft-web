@@ -5,6 +5,7 @@ import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
+import { Link as ScrollLink } from 'react-scroll'
 
 const courseMenu: Array<Navigation> = [
   {
@@ -29,9 +30,9 @@ const pageMenu = headerNavigations
 
 const companyMenu: Array<Navigation> = [
   { label: 'Contact Us', path: '../../contacUs' },
-  { label: 'Privacy & Policy', path: '../../privacy&Policy' },
-  { label: 'Term & Condition', path: '../../term&Condition' },
-  { label: 'FAQ', path: '../../faq'},
+  // { label: 'Privacy & Policy', path: '../../privacy&Policy' },
+  // { label: 'Term & Condition', path: '../../term&Condition' },
+  // { label: 'FAQ', path: '../../faq'},
 ]
 
 interface NavigationItemProps {
@@ -41,7 +42,7 @@ interface NavigationItemProps {
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
-    <Link href={path} passHref>
+    <ScrollLink to={path}>
       <MuiLink
         underline="hover"
         sx={{
@@ -52,7 +53,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
       >
         {label}
       </MuiLink>
-    </Link>
+    </ScrollLink>
   )
 }
 
