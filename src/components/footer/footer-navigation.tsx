@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import Link from 'next/link'
+import React, { FC } from 'react' 
 import Grid from '@mui/material/Grid'
 import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
 import { Link as ScrollLink } from 'react-scroll'
+import { Typography } from '@mui/material'
 
 const courseMenu: Array<Navigation> = [
   {
@@ -42,11 +42,13 @@ interface NavigationItemProps {
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
-    <ScrollLink to={path}>
+    <ScrollLink to={path} smooth>
       <MuiLink
+        component={Typography}
         underline="hover"
         sx={{
           display: 'block',
+          cursor : 'pointer',
           mb: 1,
           color: 'primary.contrastText',
         }}
