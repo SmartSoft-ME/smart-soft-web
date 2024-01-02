@@ -81,7 +81,7 @@ const HomePopularCourse: FC = () => {
 
   return (
     <Box
-      id="popular-course"
+      id="Products"
       sx={{
 
         pt: {

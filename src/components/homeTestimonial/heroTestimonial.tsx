@@ -17,13 +17,15 @@ const HomeHeroTestimonial: FC<HomeHeroData> = ({herodata}) => {
  
   const [dialogOpen , setDialogOpen]=useState(false);
 
-  const handleButtonOnClick = () =>{
+
+  const handleButtonOnClick  = () =>{
     setDialogOpen(true);
   };
-  const handleDialogClose =() =>{
+  
+  const handleDialogClose = () =>{
           setDialogOpen(false);
-  }
-
+  };
+ 
   return (
     <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } , height: '80vh'}}>
       <Container maxWidth="xl">

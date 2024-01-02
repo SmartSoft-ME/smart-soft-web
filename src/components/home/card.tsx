@@ -78,7 +78,7 @@ const HomeOurCard: FC = () => {
 
   return (
     <Box
-      id="mentors"
+      id="Pricing"
       sx={{
         pt: {
           xs: 6,

@@ -6,6 +6,8 @@ import { navigations as headerNavigations } from '@/components/navigation/naviga
 import { FooterSectionTitle } from '@/components/footer'
 import { Link as ScrollLink } from 'react-scroll'
 import { Typography } from '@mui/material'
+import { useState } from 'react'
+import  FormDialog  from '../../components/Popup/Popup-button'
 
 const courseMenu: Array<Navigation> = [
   {
@@ -38,9 +40,15 @@ const companyMenu: Array<Navigation> = [
 interface NavigationItemProps {
   label: string
   path: string
+  openDialog: () => void;
 }
 
-const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
+const NavigationItem: FC<NavigationItemProps> = ({ label, path, openDialog }) => {
+  const handleClick = () => {
+    if (path === '../../contacUs') {
+      openDialog();
+    }
+  };
   return (
     <ScrollLink to={path} smooth>
       <MuiLink
@@ -52,10 +60,12 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
           mb: 1,
           color: 'primary.contrastText',
         }}
+       onClick={handleClick}
       >
         {label}
       </MuiLink>
     </ScrollLink>
+    
   )
 }
 
@@ -66,20 +76,31 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
 ))}
 </Grid>`}
 const FooterNavigation: FC = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const openDialog = () => {
+    setDialogOpen(true);
+  };
+
+  const closeDialog = () => {
+    setDialogOpen(false);
+  };
+  
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={4}>
         <FooterSectionTitle title="Menu" />
         {pageMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={path} />
+          <NavigationItem key={index + path} label={label} path={path} openDialog={openDialog} />
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
         <FooterSectionTitle title="About" />
         {companyMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={path} />
+          <NavigationItem key={index + path} label={label} path={path} openDialog={openDialog}/>
         ))}
       </Grid>
+      <FormDialog open={dialogOpen} onClose={closeDialog} />
     </Grid>
   )
 }

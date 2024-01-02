@@ -1,15 +1,37 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import { Link as ScrollLink } from 'react-scroll'
+import { Link as ScrollLink , scroller } from 'react-scroll';
 import { navigations } from './navigation.data'
+import { useRouter } from 'next/router';
+
 
 const Navigation: FC = () => {
+  const router = useRouter();
+
+  const handleClick = (destination : string) => {
+    console.log('Handling click for destination:', destination);
+    const { pathname } = router;
+  
+    if (pathname !== '/') {
+      console.log('Redirecting to home page');
+      router.push('/');
+      console.log('Handling click for destination:', destination);
+      <ScrollLink
+          key={destination}
+          activeClass="current"
+          to={destination}
+          spy={true}
+          smooth={true}
+          duration={350}
+      />
+  }};
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
         <Box
           component={ScrollLink}
           key={destination}
+          onClick={() => handleClick(destination)}
           activeClass="current"
           to={destination}
           spy={true}
