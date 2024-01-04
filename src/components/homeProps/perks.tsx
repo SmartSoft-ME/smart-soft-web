@@ -36,13 +36,13 @@ const Perks: FC<PerksDatap> = ({perksdatatp}) => {
   return (
     <Box
     id="Section2"
-    sx={{ backgroundColor: 'lightgray', py: { xs: 6, md: 8 } }}>
+    sx={{ backgroundColor: 'background-paper', py: { xs: 6, md: 6 } }}>
       <Container>
-        <Typography variant="h2" sx={{ textAlign: 'center', mb: 4 }}>{perksdatatp.title}</Typography>
-        <Typography variant="body1" sx={{ textAlign: 'center', mb: 4 }}>
+        <Typography variant="h2" sx={{ textAlign: 'center', mb:2 }}>{perksdatatp.title}</Typography>
+        <Typography variant="body1" sx={{ textAlign: 'center', mb: 2 }}>
           {perksdatatp.subtitle}
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {perksDatad.map((perk, index) => (
             <Perk key={index} perk={perk} />
           ))}

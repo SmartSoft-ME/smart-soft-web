@@ -1,30 +1,38 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import { Link as ScrollLink , scroller } from 'react-scroll';
-import { navigations } from './navigation.data'
+import React, { FC , useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Box from '@mui/material/Box';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { navigations } from './navigation.data';
 
 
 const Navigation: FC = () => {
   const router = useRouter();
+  useEffect(() => {
+    if (router.pathname === '/' && window.location.hash) {
+      console.log(window.location.hash)
+      const sectionId = window.location.hash.substring(1); 
+      console.log(sectionId)
+      scroller.scrollTo(sectionId, {
+        duration: 350,
+        delay: 0,
+        smooth: 'easeInCubic',
+      });
+    }
+  }, [router.asPath]); 
 
-  const handleClick = (destination : string) => {
+  const handleClick = (destination : string)  => {
     console.log('Handling click for destination:', destination);
-    const { pathname } = router;
-  
-    if (pathname !== '/') {
+    if (router.pathname !== '/') {
       console.log('Redirecting to home page');
-      router.push('/');
-      console.log('Handling click for destination:', destination);
-      <ScrollLink
-          key={destination}
-          activeClass="current"
-          to={destination}
-          spy={true}
-          smooth={true}
-          duration={350}
-      />
-  }};
+      router.push('/#' + destination);
+    } else {
+      scroller.scrollTo(destination, {
+        duration: 350,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+      });
+    }
+  };
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (

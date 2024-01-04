@@ -14,8 +14,8 @@ interface HomeHeroData{
 }
 const HomeHero: FC<HomeHeroData> = ({herodata}) => {
   return (
-    <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } , height: '80vh'}}>
-      <Container maxWidth="xl">
+    <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 6 } }}>
+      <Container maxWidth="xl" >
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column'} }}>
           <Grid item xs={12}>
             <Box
