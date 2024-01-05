@@ -12,8 +12,8 @@ import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import Link from 'next/link'
 
-import { TestimonialItem } from '@/components/testimonial'
-import { data } from './testimonial.data'
+import { SolutionItem } from '@/components/solutions'
+import { data } from './solutions.data'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -51,7 +51,7 @@ const StyledSlickContainer = styled('div')(() => ({
   '& .slick-list': { marginLeft: '-30px', marginBottom: '24px' },
 }))
 
-const HomeTestimonial: FC = () => {
+const HomeSolutions: FC = () => {
   const sliderRef = useRef(null)
 
   const sliderConfig: Settings = {
@@ -69,29 +69,7 @@ const HomeTestimonial: FC = () => {
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
-            {/* <Typography
-              component="h2"
-              sx={{
-                position: 'relative',
-                fontSize: { xs: 36, md: 46 },
-                mt: { xs: 0, md: 7 },
-                mb: 4,
-                lineHeight: 1,
-                fontWeight: 'bold',
-              }}
-            > */}
               Diverse solutions for your business{' '}
-              {/* <Typography
-                component="mark"
-                sx={{
-                  position: 'relative',
-                  color: 'primary.main',
-                  fontSize: 'inherit',
-                  fontWeight: 'inherit',
-                  backgroundColor: 'unset',
-                }}
-              >
-                for your business{' '} */}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -103,15 +81,11 @@ const HomeTestimonial: FC = () => {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
-              {/* </Typography>
-            </Typography> */}
-            
             <StyledSlickContainer>
               <Slider ref={sliderRef} {...sliderConfig}>
                 {data.map((item, index) => (
                   // eslint-disable-next-line react/jsx-key
-                  <TestimonialItem key={String(index)} item={item} />
-                  
+                  <SolutionItem key={String(index)} item={item} />
                 ))}
               </Slider>
             </StyledSlickContainer>
@@ -127,4 +101,4 @@ const HomeTestimonial: FC = () => {
   )
 }
 
-export default HomeTestimonial
+export default HomeSolutions

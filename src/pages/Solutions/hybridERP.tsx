@@ -2,12 +2,12 @@ import React, { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { SaasLayout } from '@/components/layout/layoutSaas'
-import { HeroOnPermise } from '@/components/homeTestimonial/onpermise.data'
-const DynamicHomeHero = dynamic(() => import('../../components/homeTestimonial/heroTestimonial'))
+import { HeroHybrid } from '@/components/homeSolution/hybrid.data'
+const DynamicHomeHero = dynamic(() => import('../../components/homeSolution/heroSolutionl'))
 const saasERPSoftware: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeHero herodata={HeroOnPermise}/>
+      <DynamicHomeHero herodata={HeroHybrid}/>
     </>
   )
 }

@@ -1,28 +1,27 @@
 /* eslint-disable @next/next/link-passhref */
 import React, { FC } from 'react'
-import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { Testimonial } from '@/interfaces/testimonial'
+import { Solution } from '@/interfaces/Solutions'
 import Link from 'next/link'
 import Button from '@mui/material/Button';
 
 interface Props {
-  item: Testimonial
+  item: Solution
 }
 
-const TestimonialItem: FC<Props> = ({ item }) => {
+const SolutionItem: FC<Props> = ({ item }) => {
   const getId = (id: number | string) => {
     let pagePath;
     switch (item.id) {
       case 1:
-        pagePath = 'testimonial/saasErp';
+        pagePath = 'Solutions/saasErp';
         break;
       case 2:
-        pagePath = 'testimonial/onPremiseERP'; 
+        pagePath = 'Solutions/onPremiseERP'; 
         break;
       case 3:
-        pagePath = 'testimonial/hybridERP'; 
+        pagePath = 'Solutions/hybridERP'; 
         break;
       default:
         pagePath = '/';
@@ -63,4 +62,4 @@ const TestimonialItem: FC<Props> = ({ item }) => {
   )
 }
 
-export default TestimonialItem;
+export default SolutionItem;

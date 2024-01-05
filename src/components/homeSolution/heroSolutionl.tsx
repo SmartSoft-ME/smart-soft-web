@@ -7,13 +7,14 @@ import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
 import type { HeroData } from '@/interfaces/heroData'
-import  FormDialog  from '../../components/Popup/Popup-button'
+import  FormDialog  from '../Popup/Popup-button'
 
 
 interface HomeHeroData{
   herodata:HeroData
 }
-const HomeHeroTestimonial: FC<HomeHeroData> = ({herodata}) => {
+const HomeHeroSolution
+: FC<HomeHeroData> = ({herodata}) => {
  
   const [dialogOpen , setDialogOpen]=useState(false);
 
@@ -86,4 +87,5 @@ const HomeHeroTestimonial: FC<HomeHeroData> = ({herodata}) => {
   )
 }
 
-export default HomeHeroTestimonial
+export default HomeHeroSolution
+

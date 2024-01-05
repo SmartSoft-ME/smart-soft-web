@@ -9,7 +9,7 @@ import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 
-import { data } from './popular-course.data'
+import { data } from './productsdata'
 import { CourseCardItem } from '@/components/course'
 
 interface SliderArrowArrow {
@@ -58,7 +58,8 @@ const StyledDots = styled('ul')(({ theme }) => ({
   },
 }))
 
-const HomePopularCourse: FC = () => {
+const HomeProducts
+: FC = () => {
 
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
@@ -123,4 +124,5 @@ const HomePopularCourse: FC = () => {
   )
 }
 
-export default HomePopularCourse
+export default HomeProducts
+

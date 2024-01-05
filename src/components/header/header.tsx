@@ -15,9 +15,11 @@ const Header: FC = () => {
 
   return (
     <Box>
-      <Container sx={{ py: { xs: 2, md: 3 } , }}>
+      <Container sx={{ py: { xs: 2, md: 3} , }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',}}>
+          <Box sx={{ flex: '0 0 30%' }}>
           <Logo />
+          </Box>
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }}}>
             <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
               <Menu />
