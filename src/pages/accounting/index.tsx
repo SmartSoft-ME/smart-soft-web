@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { LayoutAccounting } from '@/components/layout/layoutAccountig'

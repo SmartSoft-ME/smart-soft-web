@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
-import type { HomeData } from '@/interfaces/heroData'
+import type { HomeData } from '@/interfaces/homeData'
 
 
 interface HomeHeroData{

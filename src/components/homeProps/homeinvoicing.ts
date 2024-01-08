@@ -1,4 +1,4 @@
-import { HomeData } from '../../interfaces/heroData';
+import { HomeData } from '../../interfaces/homeData';
 export const HomeInvocing : HomeData={
     title:'Smart Invoicing Features',
     subtitle:'Empowering Your Finances, Elevating Your Decisions: Unleash Agility with Our Intelligent Accounting Solution!',

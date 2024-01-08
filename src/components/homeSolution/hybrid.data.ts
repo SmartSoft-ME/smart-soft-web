@@ -1,4 +1,4 @@
-import type { HeroData } from '../../interfaces/heroData';
+import type { HeroData } from '../../interfaces/homeData';
 
 export const HeroHybrid: HeroData = {
   title: 'Hybrid ERP software',

@@ -6,12 +6,12 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
-import type { HeroData } from '@/interfaces/heroData'
+import type { HomeData } from '@/interfaces/homeData'
 import  FormDialog  from '../Popup/Popup-button'
 
 
 interface HomeHeroData{
-  herodata:HeroData
+  herodata:HomeData
 }
 const HomeHeroSolution
 : FC<HomeHeroData> = ({herodata}) => {
@@ -19,10 +19,12 @@ const HomeHeroSolution
   const [dialogOpen , setDialogOpen]=useState(false);
 
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleButtonOnClick  = () =>{
     setDialogOpen(true);
   };
   
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleDialogClose = () =>{
           setDialogOpen(false);
   };

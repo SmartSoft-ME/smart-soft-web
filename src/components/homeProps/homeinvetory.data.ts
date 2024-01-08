@@ -1,4 +1,4 @@
-import type { HomeData } from '../../interfaces/heroData';
+import type { HomeData } from '../../interfaces/homeData';
 
 export const HomeInventory: HomeData = {
   title: 'Smart Inventory Features',
