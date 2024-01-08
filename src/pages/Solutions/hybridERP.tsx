@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { SaasLayout } from '@/components/layout/layoutSaas'
 import { HeroHybrid } from '@/components/homeSolution/hybrid.data'
-const DynamicHomeHero = dynamic(() => import('../../components/homeSolution/heroSolutionl'))
+const DynamicHomeHero = dynamic(() => import('../../components/homeSolution/homeSolutionl'))
 const saasERPSoftware: NextPageWithLayout = () => {
   return (
     <>

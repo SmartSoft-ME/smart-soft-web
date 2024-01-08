@@ -6,13 +6,13 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
-import type { HeroData } from '@/interfaces/heroData'
+import type { HomeData } from '@/interfaces/heroData'
 
 
 interface HomeHeroData{
-  herodata:HeroData
+  homedata:HomeData
 }
-const HomeHero: FC<HomeHeroData> = ({herodata}) => {
+const HomeHero: FC<HomeHeroData> = ({homedata}) => {
   return (
     <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 6 } }}>
       <Container maxWidth="xl" >
@@ -39,18 +39,18 @@ const HomeHero: FC<HomeHeroData> = ({herodata}) => {
                     lineHeight: 1.3,
                   }}
                 >
-                    {herodata.title}  
+                    {homedata.title}  
             </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
               <Typography variant="h3" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
-                    {herodata.subtitle}
+                    {homedata.subtitle}
                 </Typography>
               </Box>
               <Box sx={{ mb: 8, width: { xs: '100%', md: '100%' } }}>
                 <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 }}>
                   
-                  {herodata.paragraph}                  
+                  {homedata.paragraph}                  
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>

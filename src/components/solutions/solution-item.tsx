@@ -52,7 +52,7 @@ const SolutionItem: FC<Props> = ({ item }) => {
           backgroundColor: 'background.paper',
         }}
       >
-        <Link href={pagePath}>
+        <Link href={pagePath} passHref>
           <Button variant="contained" color="primary">
             More Details
           </Button>

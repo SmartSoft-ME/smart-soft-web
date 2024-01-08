@@ -1,1 +1,1 @@
-export {default as HomeHeroSolution} from './heroSolutionl'
+export {default as HomeHeroSolution} from './homeSolutionl'

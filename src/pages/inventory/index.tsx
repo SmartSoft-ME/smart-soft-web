@@ -2,15 +2,15 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { InventoryLayout } from '@/components/layout/layoutInventory'
-import { HeroInventory } from '../../components/homeProps/heroinvetory.data'
+import { HomeInventory } from '../../components/homeProps/homeinvetory.data'
 import {perksInventory} from '../../components/homeProps/perksInventory.data'
-const DynamicHomeHero = dynamic(() => import('../../components/homeProps/heroProps'))
+const DynamicHomeHero = dynamic(() => import('../../components/homeProps/homeProps'))
  const DynamicHomePerksInventory = dynamic(() => import('../../components/homeProps/perks'))
 const SmartInventory: NextPageWithLayout = () => {
   return (
     <>
     
-      <DynamicHomeHero herodata={HeroInventory}/>
+      <DynamicHomeHero homedata={HomeInventory}/>
       <DynamicHomePerksInventory perksdatatp={perksInventory}/>
     </>
   )

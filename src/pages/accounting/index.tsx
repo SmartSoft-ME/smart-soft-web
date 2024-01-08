@@ -2,14 +2,14 @@ import React, { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { LayoutAccounting } from '@/components/layout/layoutAccountig'
-import { HeroAccountig } from '@/components/homeProps/heroaccounting'
+import { HomeAccountig } from '@/components/homeProps/homeaccounting'
 import {perksAccounting} from '../../components/homeProps/perksAccounting.data'
-const DynamicHomeHero = dynamic(() => import('../../components/homeProps/heroProps'))
+const DynamicHomeHero = dynamic(() => import('../../components/homeProps/homeProps'))
  const DynamicHomePerksInventory = dynamic(() => import('../../components/homeProps/perks'))
 const SmartAccounting: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeHero herodata={HeroAccountig}/>
+      <DynamicHomeHero homedata={HomeAccountig}/>
       <DynamicHomePerksInventory perksdatatp={perksAccounting}/>
     </>
   )
