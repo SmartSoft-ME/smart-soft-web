@@ -27,19 +27,19 @@ const FormDialog: FC<FormDialogProps> = ({open , onClose}) => {
   const [firstNameError, setFirstNameError] = useState('');
   const [lastNameError, setLastNameError] = useState('');
 
-  const resetForm = () => {
-    setEmail('');
-    setError('');
-    setPhone('');
-    setPhoneError('');
-    setFirstName('');
-    setLastName('');
-    setFirstNameError('');
-    setLastNameError('');
-  };
+  // const resetForm = () => {
+  //   setEmail('');
+  //   setError('');
+  //   setPhone('');
+  //   setPhoneError('');
+  //   setFirstName('');
+  //   setLastName('');
+  //   setFirstNameError('');
+  //   setLastNameError('');
+  // };
 
 
-  const handleChange = (event) => {
+  const handleChange = (event :React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const inputEmail = event.target.value;
     setEmail(inputEmail);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -49,7 +49,7 @@ const FormDialog: FC<FormDialogProps> = ({open , onClose}) => {
       setError('Please enter a valid email address');
     }
   };
-  const handlePhoneChange = (event) => {
+  const handlePhoneChange = (event :React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const inputValue = event.target.value;
     setPhone(inputValue);
 
@@ -61,7 +61,8 @@ const FormDialog: FC<FormDialogProps> = ({open , onClose}) => {
       setPhoneError('Please enter a valid 8-digit phone number.');
     }
   };
-  const handleFirstNameChange = (event) => {
+
+  const handleFirstNameChange = (event :React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const inputValue = event.target.value;
     setFirstName(inputValue);
     const nameRegex = /^[a-zA-Z]+$/;
@@ -72,7 +73,7 @@ const FormDialog: FC<FormDialogProps> = ({open , onClose}) => {
     }
   };
 
-  const handleLastNameChange = (event) => {
+  const handleLastNameChange = (event :React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const inputValue = event.target.value;
     setLastName(inputValue);
     const nameRegex = /^[a-zA-Z]+$/;

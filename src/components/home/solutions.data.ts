@@ -1,6 +1,6 @@
-import type { Testimonial } from '@/interfaces/Solutions'
+import type { Solution } from '@/interfaces/Solutions'
 
-export const data: Array<Testimonial> = [
+export const data: Array<Solution> = [
   {
     id: 1,
     title: 'SaaS ERP software',
