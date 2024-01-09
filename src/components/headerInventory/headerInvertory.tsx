@@ -34,9 +34,11 @@ return (
                 backgroundColor: 'background.paper',
                 zIndex: 'appBar',
                 position: 'fixed',
-                height: { xs: '100vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
+                right:0,
+                maxHeight:'100vh',
+                overflowY:'auto',
               }),
             }}
           >

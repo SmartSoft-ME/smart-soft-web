@@ -7,6 +7,7 @@ import { Logo } from '@/components/logo'
 import { Navigation, /*AuthNavigation*/ } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
+import theme from '@/config/theme'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -14,60 +15,54 @@ const Header: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   return (
-    <Box>
-      <Container sx={{ py: { xs: 2, md: 3} , }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',}}>
-          <Box sx={{ flex: '0 0 30%', padding: '5px' }}>
-          <Logo />
-          </Box>
-          <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }}}>
-            <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
-              <Menu />
-            </IconButton>
-          </Box>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              flexDirection: { xs: 'column', md: 'row' },
-    
-              transition: (theme) => theme.transitions.create(['top']),
-              ...(matchMobileView && {
-                py: 6,
-                backgroundColor: 'background.paper',
-                zIndex: 'appBar',
-                position: 'fixed',
-                height: { xs: '100vh', md: 'auto' },
-                top: visibleMenu ? 0 : '-120vh',
-                left: 0,
-                right: 0, 
-                maxHeight: '100vh', 
-                overflowY: 'auto',
-              }),
-            }}
-          >
-            <Box /> {/* Magic space */}
-            <Navigation />
-            
-            {visibleMenu && matchMobileView && (
-              <IconButton
-                sx={{
-                  position: 'fixed',
-                  top: 10,
-                  right: 10,
-                }}
-                onClick={() => setVisibleMenu(!visibleMenu)}
-              >
-                <Close />
+      <Box>
+        <Container sx={{ py: { xs: 2, md: 3 } }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Box sx={{ flex: '0 0 auto', padding: '5px' }}>
+              <Logo />
+            </Box>
+            <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
+              <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
+                <Menu />
               </IconButton>
-            )}
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexDirection: { xs: 'column', md: 'row' },
+                transition: theme.transitions.create(['top']),
+                ...(matchMobileView && {
+                  py: { xs: 3, md: 0 }, 
+                  backgroundColor: 'background.paper',
+                  zIndex: 'appBar',
+                  position: 'fixed',
+                  top: visibleMenu ? 0 : '-100%',
+                  left: 0,
+                  right: 0,
+                  maxHeight: '100vh',
+                  overflowY: 'auto', 
+                }),
+              }}
+            >
+              <Navigation />
+              {visibleMenu && matchMobileView && (
+                <IconButton
+                  sx={{
+                    position: 'fixed',
+                    top: theme.spacing(1),
+                    right: theme.spacing(1),
+                  }}
+                  onClick={() => setVisibleMenu(!visibleMenu)}
+                >
+                  <Close />
+                </IconButton>
+              )}
+            </Box>
           </Box>
-        </Box>
-      </Container>
-    </Box>
-  )
-}
-
+        </Container>
+      </Box>
+    )
+  }
 export default Header
