@@ -11,6 +11,7 @@ interface Props {
 }
 
 const SolutionItem: FC<Props> = ({ item }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getId = (id: number | string) => {
     let pagePath;
     switch (item.id) {
@@ -43,7 +44,7 @@ const SolutionItem: FC<Props> = ({ item }) => {
         sx={{
           boxShadow: 1,
           borderRadius: 1,
-          px: 2,
+          px: 3,
           py: 2,
           overflow: 'hidden',
           display: 'flex',

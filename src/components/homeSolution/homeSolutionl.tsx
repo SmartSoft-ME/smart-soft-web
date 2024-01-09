@@ -52,20 +52,19 @@ const HomeHeroSolution
                     fontSize: { xs: 40, md: 72 },
                     letterSpacing: 1.5,
                     fontWeight: 'bold',
-                    lineHeight: 1.3,
+                    lineHeight: 1.2,
                   }}
                 >
                     {herodata.title}  
             </Typography>
               </Box>
-              <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
-              <Typography variant="h3" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
+              <Box sx={{ mb: 2, width: { xs: '100%', md: '100%' } }}>
+              <Typography variant="h4" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
                     {herodata.subtitle}
                 </Typography>
               </Box>
-              <Box sx={{ mb: 8, width: { xs: '100%', md: '100%' } }}>
-                <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 ,pl: { xs: 1, sm: 2, md: 4 } }}>
-                  
+              <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
+                <Typography variant='h5' sx={{color: 'text.secondary', lineHeight: 1.6 ,pl: { xs: 4, sm: 2, md: 4 } }}>
                   {herodata.paragraph}                  
                 </Typography>
               </Box>
