@@ -107,7 +107,7 @@ const HomeHero: FC = () => {
                   }
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              <Box sx={{ '& button': { mr: 2 }, mt: { xs: 2, md: 0 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
                     Get Started
@@ -123,7 +123,7 @@ const HomeHero: FC = () => {
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
    
-            <Box sx={{ lineHeight: 0 }}>
+            <Box sx={{ lineHeight: 0, mt: { xs: 2, md: 0 }}}>
               <Image src="/images/erp-image.jpg" width={775} height={787} alt="Hero img" />
             </Box>
           </Grid>

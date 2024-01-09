@@ -17,7 +17,7 @@ const Header: FC = () => {
     <Box>
       <Container sx={{ py: { xs: 2, md: 3} , }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',}}>
-          <Box sx={{ flex: '0 0 30%' }}>
+          <Box sx={{ flex: '0 0 30%', padding: '5px' }}>
           <Logo />
           </Box>
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }}}>
@@ -42,9 +42,11 @@ const Header: FC = () => {
                 height: { xs: '100vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
+                right: 0, 
+                maxHeight: '100vh', 
+                overflowY: 'auto',
               }),
             }}
-            /*<AuthNavigation /> lezm ten7at ba3ed navigation components*/
           >
             <Box /> {/* Magic space */}
             <Navigation />

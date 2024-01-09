@@ -64,12 +64,12 @@ const HomeHeroSolution
                 </Typography>
               </Box>
               <Box sx={{ mb: 8, width: { xs: '100%', md: '100%' } }}>
-                <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 }}>
+                <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 ,pl: { xs: 1, sm: 2, md: 4 } }}>
                   
                   {herodata.paragraph}                  
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              <Box sx={{ '& button': { mr: 2,mb:1 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained" startIcon={<DownloadIcon />}>
                          Download brochure
