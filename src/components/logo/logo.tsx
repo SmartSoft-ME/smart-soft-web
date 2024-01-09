@@ -34,7 +34,6 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   } else if (isHybridPath) {
     logoText = 'Hybrid ERP';
   }
-
   return (
     <Box onClick={onClick} style={{ cursor: 'pointer' }}>
       <Typography
@@ -42,6 +41,8 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
         component="h1"
         sx={{
           fontWeight: 700,
+          position: 'relative',
+          zIndex: 2,
           '& span': {
             color: variant === 'primary' ? 'primary.main' : 'unset',
           },
