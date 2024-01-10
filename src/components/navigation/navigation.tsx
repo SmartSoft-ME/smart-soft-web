@@ -18,7 +18,7 @@ const Navigation: FC = () => {
         smooth: 'easeInCubic',
       });
     }
-  }, [router.asPath]); 
+  }, [router.asPath, router.pathname]); 
 
   const handleClick = (destination : string)  => {
     console.log('Handling click for destination:', destination);

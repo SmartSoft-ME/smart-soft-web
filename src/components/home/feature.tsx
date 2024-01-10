@@ -80,7 +80,7 @@ const HomeFeature: FC = () => {
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
+                  <img src="/images/headline-curve.svg" alt="Headline curve"  />
                 </Box>
               </Typography>
               Succeed

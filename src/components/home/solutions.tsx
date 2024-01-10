@@ -68,17 +68,6 @@ const HomeSolutions: FC = () => {
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
               Diverse solutions for your business{' '}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    top: { xs: 20, md: 28 },
-                    left: 2,
-                    '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
-                  }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
-                </Box>
             <StyledSlickContainer>
               <Slider ref={sliderRef} {...sliderConfig}>
                 {data.map((item, index) => (
