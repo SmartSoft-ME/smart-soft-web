@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
 import Box from '@mui/material/Box'
-import { HeaderInventory } from '@/components/headerInventory'
+// import { HeaderInventory } from '@/components/headerInventory'
 import { Header } from '@/components/header'
 
 interface Props {
@@ -11,7 +11,7 @@ const InventoryLayout: FC<Props> = ({ children }) => {
   return (
     <Box component="main">
       <Header/>
-      <HeaderInventory />
+      {/* <HeaderInventory /> */}
       {children}
     </Box>
   )

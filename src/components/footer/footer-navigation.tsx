@@ -9,6 +9,7 @@ import { Typography } from '@mui/material'
 import { useState } from 'react'
 import  FormDialog  from '../../components/Popup/Popup-button'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const courseMenu: Array<Navigation> = [
   {
     label: 'UI/UX Design',
@@ -69,12 +70,6 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path, openDialog }) =>
   )
 }
 
-{`<Grid item xs={12} md={4}>
-<FooterSectionTitle title="Course" />
-{courseMenu.map(({ label, path }, index) => (
-  <NavigationItem key={index + path} label={label} path={/* path */ '#'} />
-))}
-</Grid>`}
 const FooterNavigation: FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
 

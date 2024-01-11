@@ -1,18 +1,31 @@
-import React, { FC } from 'react'
+import React, { FC , useState} from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import DownloadIcon from '@mui/icons-material/Download';
-import type { HomeData } from '@/interfaces/homeData'
+import type { HomeInvetoryData } from '@/interfaces/homeInventoryData'
+import FormDialog from '../Popup/Popup-button'
+
 
 
 interface HomeHeroData{
-  homedata:HomeData
+  homedata:HomeInvetoryData
 }
-const HomeHero: FC<HomeHeroData> = ({homedata}) => {
+const HomeInventory: FC<HomeHeroData> = ({homedata}) => {
+    const [dialogOpen , setDialogOpen]=useState(false);
+
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const handleButtonOnClick  = () =>{
+    setDialogOpen(true);
+  };
+  
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const handleDialogClose = () =>{
+          setDialogOpen(false);
+  };
   return (
     <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 6 } }}>
       <Container maxWidth="xl" >
@@ -27,7 +40,7 @@ const HomeHero: FC<HomeHeroData> = ({homedata}) => {
                 justifyContent: 'center',
               }}
             >
-              <Box sx={{ mb: 3 }}>
+              {/* <Box sx={{ mb: 3 }}>
                 <Typography
                   component="h2"
                   sx={{
@@ -41,9 +54,9 @@ const HomeHero: FC<HomeHeroData> = ({homedata}) => {
                 >
                     {homedata.title}  
             </Typography>
-              </Box>
+              </Box> */}
               <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
-              <Typography variant="h3" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
+              <Typography variant="h1" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
                     {homedata.subtitle}
                 </Typography>
               </Box>
@@ -54,11 +67,11 @@ const HomeHero: FC<HomeHeroData> = ({homedata}) => {
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained" startIcon={<DownloadIcon />}>
+                  <StyledButton color="primary" size="large" variant="contained" startIcon={<DownloadIcon />} onClick={handleButtonOnClick}>
                     Request pricing
                   </StyledButton>
-                </ScrollLink>
+                  <FormDialog open={dialogOpen} onClose={handleDialogClose} />
+
               </Box>
             </Box>
           </Grid>
@@ -68,4 +81,4 @@ const HomeHero: FC<HomeHeroData> = ({homedata}) => {
   )
 }
 
-export default HomeHero
+export default HomeInventory
