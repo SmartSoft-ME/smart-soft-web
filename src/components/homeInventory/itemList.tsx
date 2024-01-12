@@ -21,7 +21,7 @@ const ItemList: FC<ItemListProps> = ({ onSelect }) => {
 
   
   return (
-    <Box sx={{ width: '100%', maxWidth: 300, bgcolor: 'background-paper' }}>
+    <Box sx={{ width: '100%', maxWidth: 300 }}>
       <nav aria-label="main mailbox folders">
         <List>
           {listDataItems.map((item, index) => (

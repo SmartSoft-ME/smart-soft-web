@@ -24,17 +24,17 @@ const PerksInventory: FC = () => {
   };
 
   return (
-    <Box id="Section2" sx={{ backgroundColor: 'background.paper', py: { xs: 6, md: 6 } }}>
+    <Box id="Section2" sx={{  py: { xs: 6, md: 6 } }}>
       <Container>
         <Typography variant="h1" sx={{ textAlign: 'center', mb: 2 }}>
-          Product capabilities
+           Features
         </Typography>
 
         {isMobile ? (
 
           <AccordionUsage/>
         ):(
-        <Box sx={{ backgroundColor: 'background.paper', display: 'flex', justifyContent: 'space-between', gap: '24px' }}>
+        <Box sx={{  display: 'flex', justifyContent: 'space-between', gap: '24px' }}>
           <ItemList onSelect={handleSelect} />
           <Box sx={{ flex: 1 }}>
             {/* <Zoom in={inZoom}> */}

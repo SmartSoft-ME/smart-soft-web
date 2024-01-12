@@ -3,10 +3,9 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { StyledButton } from '@/components/styled-button'
-import DownloadIcon from '@mui/icons-material/Download';
+// import { StyledButton } from '@/components/styled-button'
+// import DownloadIcon from '@mui/icons-material/Download';
 import type { HomeInvetoryData } from '@/interfaces/homeInventoryData'
-import FormDialog from '../Popup/Popup-button'
 
 
 
@@ -14,20 +13,20 @@ interface HomeHeroData{
   homedata:HomeInvetoryData
 }
 const HomeInventory: FC<HomeHeroData> = ({homedata}) => {
-    const [dialogOpen , setDialogOpen]=useState(false);
+  //   const [dialogOpen , setDialogOpen]=useState(false);
 
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleButtonOnClick  = () =>{
-    setDialogOpen(true);
-  };
+  // // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  // const handleButtonOnClick  = () =>{
+  //   setDialogOpen(true);
+  // };
   
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleDialogClose = () =>{
-          setDialogOpen(false);
-  };
+  // // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  // const handleDialogClose = () =>{
+  //         setDialogOpen(false);
+  // };
   return (
-    <Box id="herohome" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 6 } }}>
+    <Box id="herohome" sx={{ position: 'relative', pt: 4, pb: { xs: 8, md: 6 } }}>
       <Container maxWidth="xl" >
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column'} }}>
           <Grid item xs={12}>
@@ -66,13 +65,13 @@ const HomeInventory: FC<HomeHeroData> = ({homedata}) => {
                   {homedata.paragraph}                  
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              {/* <Box sx={{ '& button': { mr: 2 } }}>
                   <StyledButton color="primary" size="large" variant="contained" startIcon={<DownloadIcon />} onClick={handleButtonOnClick}>
                     Request pricing
                   </StyledButton>
                   <FormDialog open={dialogOpen} onClose={handleDialogClose} />
 
-              </Box>
+              </Box> */}
             </Box>
           </Grid>
         </Grid>

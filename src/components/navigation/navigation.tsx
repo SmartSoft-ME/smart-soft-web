@@ -33,6 +33,7 @@ const Navigation: FC = () => {
       });
     }
   };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
@@ -49,13 +50,13 @@ const Navigation: FC = () => {
             position: 'relative',
             color: 'text.disabled',
             cursor: 'pointer',
-            fontWeight: 600,
+            fontWeight: 800,
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             px: { xs: 0, md: 3 },
             mb: { xs: 3, md: 0 },
-            fontSize: { xs: '1.2rem', md: 'inherit' },
+            fontSize: { xs: '1.2rem', md: '16px' },
             ...(destination === '/' && {
               color: 'primary.main',
             }),

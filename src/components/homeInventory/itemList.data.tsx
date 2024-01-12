@@ -18,7 +18,7 @@ export const listDataItems: ListItemType[] = [
     },
     {    
         key: 'stock', 
-        primary: 'Stock management/adjustment',   
+        primary: 'Stock management',   
         secondary: 'Adjust stock levels and manage inventory',
         component: <Dashboarditem/>
      },

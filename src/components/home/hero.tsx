@@ -11,7 +11,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 const HomeHero: FC = () => {
   return (
-    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="/" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
           <Grid item xs={12} md={7}>
