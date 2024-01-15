@@ -11,19 +11,19 @@ export interface ListItemType {
 
 export const listDataItems: ListItemType[] = [
     {
-      key: 'Flexible and smart invoicing',
+      key: 'Flexible_and_smart_invoicing',
       primary: 'Flexible and smart invoicing',
       secondary: '',
       component: <DetailItems data={FlexibleData}/>
     },
     {    
-        key: 'Expense management', 
+        key: 'Expense_management', 
         primary: 'Expense management',   
         secondary: '',
         component: <DetailItems data={ExpenseManagmentData}/>
      },
     { 
-        key: 'Dynamic reporting',
+        key: 'Dynamic_reporting',
          primary: 'Dynamic reporting',
           secondary: '',
           component: <DetailItems data={DynamicReportingData}/>

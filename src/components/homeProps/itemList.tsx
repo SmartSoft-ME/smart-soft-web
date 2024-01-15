@@ -10,14 +10,14 @@ import { ListItemType } from './InventoryData/itemList.data';
 
 
 interface ItemListProps {
-  onSelect: (itemKey: string) => void;
+  onSelect: (itemKey: ListItemType) => void;
   items: ListItemType[];
 }
 
 const ItemList: FC<ItemListProps> = ({ onSelect , items }) => {
   const [selectIndex, setSelectIndex] = useState<number>(0);
 
-  const handleListItemClick = (index: number, itemKey: string): void => {
+  const handleListItemClick = (index: number, itemKey: ListItemType): void => {
     setSelectIndex(index);
     onSelect(itemKey);
   };
@@ -31,7 +31,7 @@ const ItemList: FC<ItemListProps> = ({ onSelect , items }) => {
             <ListItem disablePadding key={item.primary}>
               <ListItemButton
                 selected={selectIndex === index}
-                onClick={() => handleListItemClick(index, item.key)}
+                onClick={() => handleListItemClick(index, item)}
                 sx={{
                   borderBottom: '1px solid #e0e0e0',
                   '&.Mui-selected': {
