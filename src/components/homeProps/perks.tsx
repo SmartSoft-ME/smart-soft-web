@@ -58,10 +58,12 @@ const Perks: FC<PerksFeaturesProps> = ({ data }) => {
             <Box sx={{ flex: 1 }}>
               {selectedComponent}
             </Box>
+            
           </Box>
         )}
       </Container>
     </Box>
+    //USELAYOUTEFFECT
   );
 };
 

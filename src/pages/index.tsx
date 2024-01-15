@@ -10,6 +10,7 @@ const DynamicHomeSolutions = dynamic(() => import('../components/home/solutions'
 const DynamicHomeOurCard = dynamic(() => import('../components/home/card'))
 
 const Home: NextPageWithLayout = () => {
+
   return (
     <>
       <DynamicHomeHero />

@@ -19,7 +19,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
 
 
 
-  let logoText = 'SmartERP';
+  let logoText = 'Smarter ERP';
   if (isInventoryPath) {
     logoText = 'Smart Inventory';
   } else if (isAccountingPath) {
@@ -36,7 +36,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   }
   return (
     <Box onClick={onClick} sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center', position: 'relative' }}>
-      {logoText==='SmartERP' && (
+      {logoText==='Smarter ERP' && (
         // This image will only render on the main page
         // eslint-disable-next-line @next/next/no-img-element
         <img src="/images/headline-curve.svg" alt="Main Page Logo" style={{ position: 'absolute',top:0,left:0,width: '100%', height: 'auto', zIndex: 1 }} />

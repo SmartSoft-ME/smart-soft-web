@@ -10,7 +10,6 @@ interface DetailItemProps {
 
 const detailsItems: FC<DetailItemProps> = ({data}) => {
 
-
   return (
     <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Typography variant="h6" gutterBottom sx={{ mt: '4px' }}>

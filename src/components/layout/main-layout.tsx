@@ -8,6 +8,8 @@ interface Props {
 }
 
 const MainLayout: FC<Props> = ({ children }) => {
+
+  
   return (
     <Box component="main">
       <Header />
