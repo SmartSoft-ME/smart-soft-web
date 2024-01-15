@@ -1,4 +1,4 @@
-import type { HomeInvetoryData } from '../../interfaces/homeInventoryData';
+import type { HomeInvetoryData } from '../../../interfaces/homeInventoryData';
 
 export const HomeInventory: HomeInvetoryData = {
   subtitle: "Enhance your decision-making agility for quicker and more intelligent choices.",

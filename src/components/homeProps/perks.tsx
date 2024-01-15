@@ -1,52 +1,65 @@
-
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Image from 'next/image';
-import {Perks} from '../../interfaces/perks'
-import type { perksDatap } from "@/interfaces/perksData";
-import { perksDatad } from './perks.data';
-
-interface PerkProps {
-  perk: Perks ;
-  
+import { useRouter } from 'next/router';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import ItemList from './itemList';
+import DetailItems from './detailsitem';
+import AccordionUsage from './accordionItem';
+import { ListItemType } from './InventoryData/itemList.data';
+import { productData } from './InventoryData/productitem.data';
+import { worldwideData } from './AccountingData/worldwideData.data';
+import { FlexibleData } from './InvoicingData/FlexibleSmarat.data';
+interface PerksFeaturesProps {
+  data: ListItemType[];
 }
-interface PerksDatap {
-  perksdatatp : perksDatap
-}
-const Perk: FC<PerkProps> = ({ perk }) => {
-  return (
-    <Grid item xs={12} sm={6} md={3}>
-      <Box textAlign="center" mt={10}>
-      <Image src={perk.logoSrc} alt={perk.title} width={100} height={100} />
-        <Typography variant="h5" sx={{ mt: 2, fontWeight: 600 }}>
-          {perk.title}
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }}>
-          {perk.paragraph}
-        </Typography>
-      </Box>
-    </Grid>
-  );
-};
 
-const Perks: FC<PerksDatap> = ({perksdatatp}) => {
+const Perks: FC<PerksFeaturesProps> = ({ data }) => {
+  const router = useRouter();
+  const [selectedComponent, setSelectedComponent] = useState<JSX.Element | null>(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  useEffect(() => {
+    if (router.pathname.includes('/inventory')) {
+      setSelectedComponent(<DetailItems data={productData} />);
+    } else if (router.pathname.includes('/accounting')) {
+      setSelectedComponent(<DetailItems data={worldwideData} />);
+    }else if (router.pathname.includes('/invoicing')) {
+      setSelectedComponent(<DetailItems data={FlexibleData} />);
+    }
+  }, [router]);
+
+  const handleSelect = (itemKey: string) => {
+    const item = data.find((item) => item.key === itemKey);
+    if (item) {
+      setSelectedComponent(() => item.component);
+    }
+  };
+
   return (
-    <Box
-    id="Section2"
-    sx={{ backgroundColor: 'background-paper', py: { xs: 6, md: 6 } }}>
+    <Box id="Section2" sx={{ py: { xs: 6, md: 6 } }}>
       <Container>
-        <Typography variant="h2" sx={{ textAlign: 'center', mb:2 }}>{perksdatatp.title}</Typography>
-        <Typography variant="body1" sx={{ textAlign: 'center', mb: 2 }}>
-          {perksdatatp.subtitle}
+        {isMobile?(  <Typography variant="h1" sx={{ textAlign: 'center', mb: 3 ,pl:""}}>
+          Features
+        </Typography>):
+        <Typography variant="h1" sx={{ textAlign: 'center', mb: 3 ,pr:42}}>
+          Features
         </Typography>
-        <Grid container spacing={2}>
-          {perksDatad.map((perk, index) => (
-            <Perk key={index} perk={perk} />
-          ))}
-        </Grid>
+        }
+
+        {isMobile ? (
+          <AccordionUsage items={data} />
+        ) : (
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '24px' }}>
+            <ItemList items={data} onSelect={handleSelect} />
+            <Box sx={{ flex: 1 }}>
+              {selectedComponent}
+            </Box>
+          </Box>
+        )}
       </Container>
     </Box>
   );

@@ -1,2 +1,2 @@
-export {default as HomeHeroInventory} from './homeProps'
-export {default as HomePerksInevnetory} from './perks'
+export {default as HomeInventory} from './home'
+export {default as Perks} from './perks'

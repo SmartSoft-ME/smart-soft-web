@@ -38,6 +38,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           transition: (theme) => theme.transitions.create(['box-shadow']),
           '&:hover': {
             boxShadow: 2,
+            transform: 'scale(1.05)',
             [`& .${iconButtonClasses.root}`]: {
               backgroundColor: 'primary.main',
               color: 'primary.contrastText',
@@ -57,7 +58,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
+          <Typography component="h2" variant="h5" sx={{mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
             {item.title}
           </Typography>
         </Box>

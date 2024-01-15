@@ -56,7 +56,7 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
                   mb: 3,
                 }}
               >
-                {herodata.title}
+                {herodata.subtitle}
               </Typography>
 
               <Typography variant="h4" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>

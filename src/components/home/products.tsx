@@ -8,7 +8,6 @@ import { useTheme, styled } from '@mui/material/styles'
 import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
-
 import { data } from './productsdata'
 import { CourseCardItem } from '@/components/course'
 

@@ -2,12 +2,11 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { SaasLayout } from '@/components/layout/layoutSaas'
-import { HeroSaas } from '@/components/homeSolution/saas.data'
-const DynamicHomeHero = dynamic(() => import('../../components/homeSolution/homeSolutionl'))
+const DynamicHomeHero = dynamic(() => import('../../components/homeSolution/homeSaas'))
 const saasERPSoftware: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeHero herodata={HeroSaas}/>
+      <DynamicHomeHero/>
     </>
   )
 }

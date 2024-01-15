@@ -3,14 +3,20 @@ import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import { listDataItems } from './itemList.data'
 import { green } from '@mui/material/colors'
+import { ListItemType } from './InventoryData/itemList.data'
+import { Container } from '@mui/material'
 
-const AccordionUsage: React.FC = () => {
+interface ItemListProps{
+  items : ListItemType[];
+}
+
+
+const AccordionUsage: React.FC<ItemListProps> = ({items}) => {
   return (
-    <div>
-      {listDataItems.map((item) => (
-        <Accordion key={item.key} sx={{ boxShadow: 'none', borderBottom: '1px solid #e0e0e0' }}>
+    <Container>
+      {items.map((item) => (
+        <Accordion key={item.key} sx={{ boxShadow: 'none', borderBottom: '1px solid #e0e0e0',bgcolor:'#f5f5f9' }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`panel-${item.key}-content`}
@@ -28,11 +34,13 @@ const AccordionUsage: React.FC = () => {
             <br />
             {item.secondary}
           </AccordionSummary>
-          <AccordionDetails>{item.component}</AccordionDetails>
+          <AccordionDetails>
+              {item.component}
+          </AccordionDetails>
         </Accordion>
       ))}
       ;
-    </div>
+    </Container>
   )
 }
 

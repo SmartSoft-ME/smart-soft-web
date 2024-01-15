@@ -1,4 +1,5 @@
-export interface HomeData {
+export interface HomeSolutionData {
+
     subtitle:string
     paragraph:string
 }

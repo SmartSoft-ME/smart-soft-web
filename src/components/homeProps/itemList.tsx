@@ -6,12 +6,15 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import { green } from '@mui/material/colors';
-import { listDataItems } from './itemList.data';
+import { ListItemType } from './InventoryData/itemList.data';
+
+
 interface ItemListProps {
   onSelect: (itemKey: string) => void;
+  items: ListItemType[];
 }
 
-const ItemList: FC<ItemListProps> = ({ onSelect }) => {
+const ItemList: FC<ItemListProps> = ({ onSelect , items }) => {
   const [selectIndex, setSelectIndex] = useState<number>(0);
 
   const handleListItemClick = (index: number, itemKey: string): void => {
@@ -24,7 +27,7 @@ const ItemList: FC<ItemListProps> = ({ onSelect }) => {
     <Box sx={{ width: '100%', maxWidth: 300 }}>
       <nav aria-label="main mailbox folders">
         <List>
-          {listDataItems.map((item, index) => (
+          {items.map((item, index) => (
             <ListItem disablePadding key={item.primary}>
               <ListItemButton
                 selected={selectIndex === index}

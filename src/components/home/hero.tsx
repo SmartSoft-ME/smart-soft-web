@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC,useState } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -7,9 +7,19 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import Dialog from '@mui/material/Dialog'
 
 
 const HomeHero: FC = () => {
+  const [videoModalOpen, setVideoModalOpen] = useState(false)
+
+  const handleWatchVideoClick = () => {
+    setVideoModalOpen(true)
+  }
+
+  const closeVideoModal = () => {
+    setVideoModalOpen(false)
+  }
   return (
     <Box id="/" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
@@ -95,7 +105,7 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                 with Smart ERP Solutions                </Typography>
+                 with Smarter ERP Solutions                </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
@@ -111,7 +121,13 @@ const HomeHero: FC = () => {
                   </StyledButton>
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
+                <StyledButton
+                    color="primary"
+                    size="large"
+                    variant="outlined"
+                    startIcon={<PlayArrowIcon />}
+                    onClick={handleWatchVideoClick}
+                  >
                     Watch Video
                   </StyledButton>
                 </ScrollLink>
@@ -127,6 +143,15 @@ const HomeHero: FC = () => {
         </Grid>
 
       </Container>
+      <Dialog open={videoModalOpen} onClose={closeVideoModal} maxWidth="md" fullWidth>
+        <Box sx={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+          <iframe
+            src="https://1drv.ms/v/s!AoGD3nOKKfItglKc5vwDj-0Q03Re?e=AW6EVV"
+            allowFullScreen
+            style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+          />
+        </Box>
+      </Dialog>
     </Box>
   )
 }
