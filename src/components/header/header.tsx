@@ -21,7 +21,6 @@ const Header: FC = () => {
           <Box sx={{ flex: '0 0 auto', padding: '2px' }}>
             <Logo />
           </Box>
-
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
             <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
               <Menu />

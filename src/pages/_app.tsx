@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import theme from '@/config/theme'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { CssBaseline } from '@mui/material'
@@ -28,6 +29,17 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
+      <meta charSet="utf-8" />
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+          {/* PWA primary color */}
+          <meta name="theme-color" content={theme.palette.background.paper} />
+
+          <meta content="#fbfbfb" name="theme-color" />
+          <meta content="#fbfbfb" name="msapplication-navbutton-color" />
+          <meta content="#fbfbfb" name="apple-mobile-web-app-status-bar-style" />
+          <meta content="yes" name="apple-mobile-web-app-capable" />
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
         <title>Smarter ERP</title>
       </Head>
