@@ -39,7 +39,6 @@ const AccordionUsage: React.FC<ItemListProps> = ({items}) => {
           </AccordionDetails>
         </Accordion>
       ))}
-      ;
     </Container>
   )
 }

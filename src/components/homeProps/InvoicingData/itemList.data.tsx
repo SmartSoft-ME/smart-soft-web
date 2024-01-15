@@ -28,4 +28,4 @@ export const listDataItems: ListItemType[] = [
           secondary: '',
           component: <DetailItems data={DynamicReportingData}/>
      },
-  ];
+  ]
