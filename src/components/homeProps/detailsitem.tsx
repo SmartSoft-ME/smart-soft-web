@@ -12,7 +12,7 @@ const detailsItems: FC<DetailItemProps> = ({data}) => {
 
   return (
     <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-      <Typography variant="h6" gutterBottom sx={{ mt: '4px' }}>
+      <Typography variant="h5" gutterBottom sx={{ mt: '4px' }}>
         {data.Description}
       </Typography>
       <Image src={data.image} width={400} height={200} alt="Hero img" />

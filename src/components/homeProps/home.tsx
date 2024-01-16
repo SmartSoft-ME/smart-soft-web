@@ -21,17 +21,20 @@ const HomeFeatures: FC<HomeHeroData> = ({homedata}) => {
               sx={{
                 textAlign: { xs: 'center', md: 'center' },
                 height: '100%',
+                width: { xs: '100%', md: '80%' },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                marginLeft: 'auto',
+                marginRight: 'auto',
               }}
             >
               <Box sx={{ mb: 4, width: { xs: '100%', md: '100%' } }}>
-              <Typography variant="h1" sx={{ mt: 2, fontWeight: 600, textAlign: 'center' }}>
+              <Typography variant="h1" sx={{ mt: 2, fontWeight: 600, textAlign: 'center'}}>
                     {homedata.subtitle}
                 </Typography>
               </Box>
-              <Box sx={{ mb: 8, width: { xs: '100%', md: '100%' } }}>
+              <Box sx={{ mb: 4, mt: 2, width: { xs: '100%', md: '100%' } }}>
                 <Typography variant='h4' sx={{color: 'text.secondary', lineHeight: 1.6 }}>  
                   {homedata.paragraph}                  
                 </Typography>
