@@ -21,10 +21,10 @@ const HomeHeroSolution: FC = () => {
 
  
   return (
-    <Box id="/" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="/" sx={{backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
-        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={3} sx={{ flexDirection: { xs: 'column', md: 'unset' }}}>
+          <Grid item xs={12} md={7} >
             <Box
               sx={{
                 textAlign: { xs: 'center', md: 'left' },
@@ -46,8 +46,8 @@ const HomeHeroSolution: FC = () => {
                   Empower Your Business, Elevate Your Efficiency: Our ERP SaaS Solution, Your Success Symphony!
                 </Typography>
               </Box>
-              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
-                <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+              <Box sx={{ mb:2, width: { xs: '100%', md: '70%' } }}>
+                <Typography sx={{ color: 'text.secondary', lineHeight: 1.7}}>
                   {
                     'Experience the Future of Business Management with Our Cloud ERP Solution! Unlock unparalleled efficiency, security and flexibility as our cutting-edge technology seamlessly integrates finance, accounting, invoicing, and inventory management. Access your business data securely from anywhere, anytime'
                   }
@@ -70,7 +70,8 @@ const HomeHeroSolution: FC = () => {
                 width={775}
                 height={600}
                 alt="Hero img"
-                style={{ borderRadius: '15px' }}
+                
+                style={{ borderRadius: '50px' }}
               />
             </Box>
           </Grid>
