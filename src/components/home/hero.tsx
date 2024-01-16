@@ -1,4 +1,4 @@
-import React, { FC,useState } from 'react'
+import React, { FC,useState,useRef } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -8,10 +8,14 @@ import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import Dialog from '@mui/material/Dialog'
+import CancelIcon from '@mui/icons-material/Cancel';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import { Button, DialogTitle } from '@mui/material'
 
 
 const HomeHero: FC = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const handleWatchVideoClick = () => {
     setVideoModalOpen(true)
@@ -20,6 +24,21 @@ const HomeHero: FC = () => {
   const closeVideoModal = () => {
     setVideoModalOpen(false)
   }
+  
+  const handleFullscreen = () => {
+    const iframe = iframeRef.current;
+    if (iframe) {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if ((iframe as any).mozRequestFullScreen) { 
+        (iframe as any).mozRequestFullScreen();
+      } else if ((iframe as any).webkitRequestFullscreen) { 
+        (iframe as any).webkitRequestFullscreen();
+      } else if ((iframe as any).msRequestFullscreen) { 
+        (iframe as any).msRequestFullscreen();
+      }
+    }
+  };
   return (
     <Box id="/" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
@@ -144,9 +163,25 @@ const HomeHero: FC = () => {
 
       </Container>
       <Dialog open={videoModalOpen} onClose={closeVideoModal} maxWidth="md" fullWidth>
+      <DialogTitle sx={{ 
+            cursor: 'pointer', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'space-between',
+            height:'20px'
+          }}
+        > 
         
+           <Button onClick={handleFullscreen}>
+            FullScreen
+           <FullscreenIcon/>
+          </Button>
+          <CancelIcon onClick={closeVideoModal} />
+
+        </DialogTitle>
         <Box sx={{ padding: '56.25% 0 0 0', position: 'relative' }}>
           <iframe
+            ref={iframeRef}
             src="https://1drv.ms/v/s!AoGD3nOKKfItglKc5vwDj-0Q03Re?e=AW6EVV"
             allowFullScreen
             style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}

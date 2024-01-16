@@ -7,7 +7,7 @@ import { listDataItems } from '@/components/homeProps/InvoicingData/itemList.dat
 
 
 const DynamicHomeHero = dynamic(() => import('../../components/homeProps/home'))
- const DynamicHomePerksInvoicing = dynamic(() => import('../../components/homeProps/perks'))
+ const DynamicHomePerksInvoicing = dynamic(() => import('../../components/homeProps/features'))
  const DynamicFlaotingButton = dynamic(() => import('../../components/styled-button/floating-button'))
 const SmartAccounting: NextPageWithLayout = () => {
   return (

@@ -51,6 +51,7 @@ const Navigation: FC = () => {
             color: 'text.disabled',
             cursor: 'pointer',
             fontWeight: 800,
+            
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',

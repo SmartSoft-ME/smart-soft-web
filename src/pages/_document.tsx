@@ -1,5 +1,4 @@
 import React from 'react'
-import theme from '@/config/theme'
 import { NextComponentType } from 'next'
 import { AppInitialProps } from 'next/app'
 import { EmotionCache } from '@emotion/cache'

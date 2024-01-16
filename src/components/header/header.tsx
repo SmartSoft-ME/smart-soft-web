@@ -16,9 +16,9 @@ const Header: FC = () => {
 
   return (
     <Box>
-    <Container sx={{ py: { xs: 1, md: 2 } }}>
+    <Container sx={{ width:"95%",py: { xs: 1, md: 2 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Box sx={{ flex: '0 0 auto', padding: '2px' }}>
+          <Box sx={{flex: '0 0 auto', padding: '2px' }}>
             <Logo />
           </Box>
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>

@@ -19,7 +19,6 @@ const Perks: FC<PerksFeaturesProps> = ({ data }) => {
  
   const [selectedItem,setItem] = useState<ListItemType | null>(data.length > 0 ? data[0] : null)
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  
   const handleSelect = (item: ListItemType) => { 
     setItem(item) 
   };
@@ -50,7 +49,6 @@ const Perks: FC<PerksFeaturesProps> = ({ data }) => {
         )}
       </Container>
     </Box>
-    //USELAYOUTEFFECT
   )
 }
 

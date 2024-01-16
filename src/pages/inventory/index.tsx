@@ -5,7 +5,7 @@ import { InventoryLayout } from '@/components/layout/layoutInventory'
 import { HomeInventory } from '../../components/homeProps/InventoryData/homeinvetory.data'
 import { listDataItems } from '@/components/homeProps/InventoryData/itemList.data'
 const DynamicHomeHero = dynamic(() => import('../../components/homeProps/home'))
- const DynamicHomePerksInventory = dynamic(() => import('../../components/homeProps/perks'))
+ const DynamicHomePerksInventory = dynamic(() => import('../../components/homeProps/features'))
  const DynamicFlaotingButton = dynamic(() => import('../../components/styled-button/floating-button'))
 
 const SmartInventory: NextPageWithLayout = () => {
