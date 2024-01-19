@@ -3,7 +3,7 @@ import type { Course } from '@/interfaces/course'
 export const data: Array<Course> = [
   {
     id: 1,
-    cover: '/images/inventory.jpg',
+    cover: '/images/inv02.jpg',
     title: 'Smart inventory',
     rating: 5,
 
@@ -11,7 +11,7 @@ export const data: Array<Course> = [
   },
   {
     id: 2,
-    cover: '/images/courses/accounting.jpg',
+    cover: '/images/Accountingworldwide.jpg',
     title: 'Smart accounting',
     rating: 4,
  
@@ -19,7 +19,7 @@ export const data: Array<Course> = [
   },
   {
     id: 3,
-    cover: '/images/invoicing.jpg',
+    cover: '/images/expenses.jpg',
     title: 'Smart invoicing',
     rating: 4,
 

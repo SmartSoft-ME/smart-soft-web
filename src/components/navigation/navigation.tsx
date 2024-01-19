@@ -4,14 +4,12 @@ import Box from '@mui/material/Box';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { navigations } from './navigation.data';
 
-
 const Navigation: FC = () => {
   const router = useRouter();
+
   useEffect(() => {
     if (router.pathname === '/' && window.location.hash) {
-      console.log(window.location.hash)
       const sectionId = window.location.hash.substring(1); 
-      console.log(sectionId)
       scroller.scrollTo(sectionId, {
         duration: 350,
         delay: 0,
@@ -20,18 +18,25 @@ const Navigation: FC = () => {
     }
   }, [router.asPath, router.pathname]); 
 
-  const handleClick = (destination : string)  => {
-    console.log('Handling click for destination:', destination);
+  const handleClick = (destination: string)  => {
     if (router.pathname !== '/') {
-      console.log('Redirecting to home page');
       router.push('/#' + destination);
     } else {
       scroller.scrollTo(destination, {
         duration: 350,
-        delay: 0,
+        delay:0,
         smooth: 'easeInOutQuart',
       });
     }
+  };
+
+  const getNavColor = (destination: string) => {
+    if (router.pathname === '/' && destination === '/') {
+      return 'primary.main';
+    } else if (router.pathname.includes(destination) && destination !== '/') {
+      return 'primary.main';
+    }
+    return 'text.disabled';
   };
 
   return (
@@ -48,29 +53,20 @@ const Navigation: FC = () => {
           duration={350}
           sx={{
             position: 'relative',
-            color: 'text.disabled',
+            color: getNavColor(destination),
             cursor: 'pointer',
             fontWeight: 800,
-            
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             px: { xs: 0, md: 3 },
             mb: { xs: 3, md: 0 },
             fontSize: { xs: '1.2rem', md: '16px' },
-            ...(destination === '/' && {
-              color: 'primary.main',
-            }),
-
             '& > div': { display: 'none' },
-
-            '&.current>div': { display: 'block' },
-
+            '&.current > div': { display: 'block' },
             '&:hover': {
               color: 'primary.main',
-              '&>div': {
-                display: 'block',
-              },
+              '& > div': { display: 'block' },
             },
           }}
         >
@@ -82,14 +78,16 @@ const Navigation: FC = () => {
               '& img': { width: 44, height: 'auto' },
             }}
           >
-            {/* eslint-disable-next-line */}
+          {/* eslint-disable-next-line */}
             <img src="/images/headline-curve.svg" alt="Headline curve" />
           </Box>
           {label}
         </Box>
       ))}
     </Box>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
+
+            {/* eslint-disable-next-line */}

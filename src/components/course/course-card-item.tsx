@@ -17,9 +17,9 @@ const CourseCardItem: FC<Props> = ({ item }) => {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const getPagePath = (id: number | string) => {
     switch (id) {
-      case 1: return '/inventory';
-      case 2: return '/accounting';
-      case 3: return '/invoicing';
+      case 1: return '/Products/inventory';
+      case 2: return '/Products/accounting';
+      case 3: return '/Products/invoicing';
       default: return '/';
     }
   };
