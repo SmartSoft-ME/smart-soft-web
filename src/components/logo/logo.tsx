@@ -39,8 +39,8 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
         <img
           src="/images/logo/smarter-erp-logo.png"
           alt="Main Page Logo"
-          width={200} 
-          height={50} 
+          width={300} 
+          height={100} 
         />
       ) : (
         <Typography
