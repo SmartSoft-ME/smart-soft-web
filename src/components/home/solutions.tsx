@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/link-passhref */
 import React, { FC, useRef } from 'react'
-import Image from 'next/image'
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'

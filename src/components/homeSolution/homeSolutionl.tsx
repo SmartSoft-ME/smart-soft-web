@@ -7,10 +7,10 @@ import { StyledButton } from '@/components/styled-button'
 import FormDialog from '../Popup/Popup-button'
 import Stack from '@mui/material/Stack'
 import Image from 'next/image'
-import type { HomeData } from '@/interfaces/homeData'
+import type { HomeSolutionData } from '@/interfaces/homeSolutionData'
 
 interface HomeHeroData {
-  herodata: HomeData
+  herodata: HomeSolutionData
 }
 
 const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
