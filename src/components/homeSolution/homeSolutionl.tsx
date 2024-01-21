@@ -70,7 +70,7 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             <Box sx={{ lineHeight: 0, mt: { xs: 2, md: 0 } }}>
               <Image
-                src="/images/erp-image.jpg"
+                src={herodata.image}
                 width={775}
                 height={600}
                 alt="Hero img"

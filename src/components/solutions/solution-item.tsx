@@ -5,6 +5,9 @@ import Typography from '@mui/material/Typography'
 import { Solution } from '@/interfaces/Solutions'
 import Link from 'next/link'
 import Button from '@mui/material/Button';
+import Image from 'next/image'
+import Grid from '@mui/material/Grid'
+
 
 interface Props {
   item: Solution
@@ -34,32 +37,38 @@ const SolutionItem: FC<Props> = ({ item }) => {
 
   return (
     <Box sx={{ padding: '30px' }}>
-      <Box sx={{ mb: 2 }}>
+    <Grid container spacing={2}>
+      <Grid item xs={12} md={6}>
+        <Box sx={{ mb: 2 }}>
           <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
             {item.title}
           </Typography>
-        <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.content}</Typography>
-      </Box>
-      <Box
-        sx={{
-          boxShadow: 1,
-          borderRadius: 1,
-          px: 3,
-          py: 2,
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'center',
-          width: 270,
-          backgroundColor: 'background.paper',
-        }}
-      >
-        <Link href={pagePath} passHref>
-          <Button variant="contained" color="primary">
-            More Details
-          </Button>
-        </Link>
-      </Box>
-    </Box>
+          <Typography sx={{ mb: 2, color: 'text.secondary' }}>
+            {item.content}
+          </Typography>
+        </Box>
+        <Box>
+          <Link href={pagePath} passHref>
+            <Button variant="contained" color="primary">
+              More Details
+            </Button>
+          </Link>
+        </Box>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Box sx={{ width: '90%', height: '80%', position: 'relative' }}>
+          <Image 
+            src={item.image} 
+            alt={item.title} 
+            layout="responsive" 
+            width={520} 
+            height={400} 
+            quality={97} 
+          />
+        </Box>
+      </Grid>
+    </Grid>
+  </Box>
   )
 }
 

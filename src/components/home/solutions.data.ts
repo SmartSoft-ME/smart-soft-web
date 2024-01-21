@@ -6,7 +6,7 @@ export const data: Array<Solution> = [
     title: 'SaaS ERP software',
     content:
       'Experience the Future of Business Management with Our Cloud ERP Solution! Unlock unparalleled efficiency, security and flexibility as our cutting-edge technology seamlessly integrates finance, accounting, invoicing, and inventory management. Access your business data securely from anywhere, anytime. Elevate your operations, streamline workflows, and embrace the power of innovation. Join the next generation of business success with our Cloud ERP Solution – Your Gateway to Smarter, Simpler, and More Profitable Operations',
-   image:'/images/Accountingworldwide.jpg',
+   image:'/images/saas03.jpg',
   },
   {
     id: 2,

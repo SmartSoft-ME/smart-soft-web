@@ -27,7 +27,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
         backgroundColor: 'background.paper',
         color: 'primary.main',
         '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
-        bottom: { xs: '-28px !important', md: '64px !important' },
+        bottom: { xs: '-28px !important', md: '-20px !important' },
         left: 'unset !important',
         right: type === 'prev' ? '90px !important' : '30px !important',
         zIndex: 10,
@@ -64,27 +64,16 @@ const HomeSolutions: FC = () => {
 
   return (
     <Box id="Solutions" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
-      <Container>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
-              Diverse solutions for your business{' '}
-            <StyledSlickContainer>
-              <Slider ref={sliderRef} {...sliderConfig}>
-                {data.map((item, index) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <SolutionItem key={String(index)} item={item} />
-                ))}
-              </Slider>
-            </StyledSlickContainer>
-          </Grid>
-          <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
-            <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/solutions_imame.jpeg" width={520} height={400} quality={97} alt="Testimonial img" />
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+    <Container>
+      <StyledSlickContainer>
+        <Slider ref={sliderRef} {...sliderConfig}>
+          {data.map((item, index) => (
+            <SolutionItem key={String(index)} item={item} />
+          ))}
+        </Slider>
+      </StyledSlickContainer>
+    </Container>
+  </Box>
   )
 }
 
