@@ -16,7 +16,15 @@ const AccordionUsage: React.FC<ItemListProps> = ({items}) => {
   return (
     <Container>
       {items.map((item) => (
-        <Accordion key={item.key} sx={{ boxShadow: 'none', borderBottom: '1px solid #e0e0e0',bgcolor:'#f5f5f9' }}>
+        <Accordion
+        key={item.key}
+        sx={{
+          boxShadow: 'none',
+          borderBottom: '1px solid #e0e0e0',
+          bgcolor: '#f5f5f9',
+          margin: '10px 0', 
+        }}
+      >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`panel-${item.key}-content`}
