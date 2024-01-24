@@ -83,10 +83,9 @@ const HomeProducts
     <Box
       id="Products"
       sx={{
-
         pt: {
           xs: 6,
-          md: 8,
+          md: 4,
         },
         pb: 14,
         backgroundColor: 'background.default',//background.default
@@ -105,8 +104,8 @@ const HomeProducts
               }}
             >
               <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                  Most popular products
-              </Typography>
+Mohamad          
+    </Typography>
             </Box>
           </Grid>
 
