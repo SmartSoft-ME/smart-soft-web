@@ -37,11 +37,12 @@ const BorderLinearProgress = styled(LinearProgress, {
 
 const HomeFeature: FC = () => {
   return (
-    <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background-paper' }}>{/**/ }
+    <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background-paper' }}>
+      {/**/}
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ position: 'relative' }}>
+            <Box sx={{ borderRadius: '30px', overflow: 'hidden' }}>
               <Image src="/images/emp02.jpg" width={650} height={678} quality={97} alt="Feature img" />
             </Box>
           </Grid>
@@ -58,7 +59,7 @@ const HomeFeature: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Empower Your Business Mastery {' '}
+              Empower Your Business Mastery{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -69,7 +70,7 @@ const HomeFeature: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                 Control, Monitor, <br />
+                Control, Monitor, <br />
                 <Box
                   sx={{
                     position: 'absolute',
@@ -80,15 +81,17 @@ const HomeFeature: FC = () => {
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve"  />
+                  <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
               Succeed
             </Typography>
 
             <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-            Embark on a journey of expertise in finance, inventory management, and smart invoicing. Our ERP solutions empower you to seamlessly control and monitor every aspect of your company and investments, ensuring success with an enjoyable learning curve.
-            Master the tools that drive efficiency and elevate your business to new heights.
+              Embark on a journey of expertise in finance, inventory management, and smart invoicing. Our ERP solutions
+              empower you to seamlessly control and monitor every aspect of your company and investments, ensuring
+              success with an enjoyable learning curve. Master the tools that drive efficiency and elevate your business
+              to new heights.
             </Typography>
 
             <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>

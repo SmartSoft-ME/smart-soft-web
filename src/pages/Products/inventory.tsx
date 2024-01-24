@@ -6,14 +6,12 @@ import { HomeInventory } from '../../components/homeProps/InventoryData/homeinve
 import { listDataItems } from '@/components/homeProps/InventoryData/itemList.data'
 const DynamicHomeHero = dynamic(() => import('../../components/homeProps/home'))
  const DynamicHomePerksInventory = dynamic(() => import('../../components/homeProps/features'))
- const DynamicFlaotingButton = dynamic(() => import('../../components/styled-button/floating-button'))
 
 const SmartInventory: NextPageWithLayout = () => {
   return (
     <>
       <DynamicHomeHero homedata={HomeInventory}/>
       <DynamicHomePerksInventory data={listDataItems}  />
-       <DynamicFlaotingButton/>
 
     </>
   )

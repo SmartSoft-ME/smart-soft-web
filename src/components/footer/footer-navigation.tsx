@@ -4,10 +4,11 @@ import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
-import { Link as ScrollLink } from 'react-scroll'
+import { Link as ScrollLink ,scroller } from 'react-scroll'
 import { Typography } from '@mui/material'
 import { useState } from 'react'
 import  FormDialog  from '../../components/Popup/Popup-button'
+import { useRouter } from 'next/router';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const courseMenu: Array<Navigation> = [
@@ -45,9 +46,21 @@ interface NavigationItemProps {
 }
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path, openDialog }) => {
+  const router = useRouter();
+
   const handleClick = () => {
     if (path === '../../contacUs') {
       openDialog();
+    }
+    else if (router.pathname !== '/')
+    {
+      router.push('/#' + path).then(() => {
+        scroller.scrollTo(path.substring(1), {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+        });
+      });
     }
   };
   return (

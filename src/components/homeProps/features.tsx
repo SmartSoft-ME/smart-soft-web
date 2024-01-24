@@ -26,16 +26,9 @@ const Perks: FC<PerksFeaturesProps> = ({ data }) => {
   return (
     <Box id="Section2" sx={{ py: { xs: 6, md: 6 } }}>
       <Container>
-        {isMobile ? (
           <Typography variant="h1" sx={{ textAlign: 'center', mb: 3, pl: '' }}>
             Features
           </Typography>
-        ) : (
-          <Typography variant="h1" sx={{ textAlign: 'center', mb: 3, pr: 42 }}>
-            Features
-          </Typography>
-        )}
-
         {isMobile ? (
           <AccordionUsage items={data} />
         ) : (
