@@ -17,7 +17,7 @@ export const data: Array<Course> = [
   },
   {
     id: 3,
-    image: '/images/emp01.jpggit ',
+    image: '/images/emp01.jpg',
     title: 'Smart invoicing',
     rating: 4,
     category: 'Beginner',
