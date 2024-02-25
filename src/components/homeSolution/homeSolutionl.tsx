@@ -71,8 +71,8 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
             <Box sx={{ lineHeight: 0, mt: { xs: 2, md: 0 } }}>
               <Image
                 src={herodata.image}
-                width={775}
-                height={600}
+                width={1000}
+                height={1250}
                 alt="Hero img"
                 
                 style={{ borderRadius: '50px' }}
