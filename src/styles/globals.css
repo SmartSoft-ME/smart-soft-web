@@ -53,3 +53,35 @@ body {
     opacity: 0;
   }
 }
+
+
+#mk-icon-box-5 .mk-box-icon-2-icon {
+  color: #ffffff!important;
+  background-color: rgb(255 255 255 / 50%);
+}
+.mk-box-icon-2.box-align-center .mk-box-icon-2-icon, .mk-box-icon-2.box-align-center .mk-box-icon-2-image {
+  margin: 0 auto;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-48 {
+  line-height: 98px;
+  height: 100px;
+  width: 100px;
+}
+  
+.mk-box-icon-2 .mk-box-icon-2-icon {
+  border-width: 2px!important;
+  border-radius: 50%;
+  -webkit-transition: all ease-in .2s;
+  transition: all ease-in .2s;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  transition: all 0.3s ease, filter 0.5s ease; 
+}
+   
+.mk-box-icon-2 .mk-box-icon-2-icon:hover {
+  background-color: rgba(253,197,2,0.5) !important; 
+  transform: scale(1.3);
+}

@@ -33,7 +33,7 @@ const courseMenu: Array<Navigation> = [
 const pageMenu = headerNavigations
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '../../contacUs' },
+  { label: 'Contact Us', path: 'contactUs' },
   // { label: 'Privacy & Policy', path: '../../privacy&Policy' },
   // { label: 'Term & Condition', path: '../../term&Condition' },
   // { label: 'FAQ', path: '../../faq'},
@@ -48,9 +48,15 @@ interface NavigationItemProps {
 const NavigationItem: FC<NavigationItemProps> = ({ label, path, openDialog }) => {
   const router = useRouter();
 
-  const handleClick = () => {
-    if (path === '../../contacUs') {
-      openDialog();
+  const handleClick = () => { 
+    if (path === "contactUs") {
+      router.push(path).then(()=>{
+        scroller.scrollTo("contactUs", {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+        });
+      })
     }
     else if (router.pathname !== '/')
     {
