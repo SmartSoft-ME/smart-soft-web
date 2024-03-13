@@ -4,7 +4,10 @@ import Box from '@mui/material/Box';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { navigations } from './navigation.data';
 
-const Navigation: FC = () => {
+export interface NavigationProps{
+  onCLose : () => void
+}
+const Navigation: FC<NavigationProps> = ({onCLose}) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -27,7 +30,9 @@ const Navigation: FC = () => {
         delay:0,
         smooth: 'easeInOutQuart',
       });
+    
     }
+    onCLose?.()
   };
 
   const getNavColor = (destination: string) => {

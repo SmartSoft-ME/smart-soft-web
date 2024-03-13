@@ -46,7 +46,11 @@ const Header: FC = () => {
               })
             }}
           >
-            <Navigation />
+            <Navigation 
+              onCLose={()=>{
+                setVisibleMenu(false) 
+              }}
+            />
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
