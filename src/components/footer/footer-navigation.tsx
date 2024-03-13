@@ -48,9 +48,9 @@ interface NavigationItemProps {
 const NavigationItem: FC<NavigationItemProps> = ({ label, path, openDialog }) => {
   const router = useRouter();
 
-  const handleClick = () => { 
+  const handleClick = () => {  
     if (path === "contactUs") {
-      router.push(path).then(()=>{
+      router.push("/" + path).then(()=>{
         scroller.scrollTo("contactUs", {
           duration: 800,
           delay: 0,
