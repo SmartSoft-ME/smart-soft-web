@@ -41,6 +41,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
           alt="Main Page Logo"
           width={300} 
           height={100} 
+          style={{objectFit : 'cover'}}
         />
       ) : (
         <Typography
