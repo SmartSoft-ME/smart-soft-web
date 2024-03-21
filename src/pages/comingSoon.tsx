@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react' 
 import { NextPageWithLayout } from '@/interfaces/layout'
-import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, TextField, Typography, useTheme } from '@mui/material'
 import { Send } from '@mui/icons-material'
+import { Watch } from 'react-loader-spinner'
  
 const CommingSoonPage: NextPageWithLayout = () => {
  
-
+const theme  = useTheme()
 useEffect(()=>{
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -17,13 +18,24 @@ useEffect(()=>{
   return (
     <Box className='TETT'>  
         <Grid container component={Container} height={'100vh'} alignItems={'center'} className=''>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
+            <Watch
+                visible={true}
+                height="80"
+                width="80"
+                radius="48"
+                color={theme.palette.primary.main}
+                ariaLabel="watch-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+  />
                 <Typography variant='h3' >We are coming soon</Typography>
+               
                 <Typography>
                   We are excited to announce the upcoming launch of our website very soon.  
                 </Typography> 
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
             <svg
   className="animated"
   id="freepik_stories-create"
