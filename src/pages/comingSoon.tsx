@@ -16,7 +16,7 @@ useEffect(()=>{
   return (
     <Box className='TETT'>  
         <Grid container component={Container} height={'100vh'} alignItems={'center'} className=''>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} flexDirection={'row'} display={'flex'}>
               <MuiWatch
                 visible={true}
                 height="80"
@@ -27,11 +27,13 @@ useEffect(()=>{
                 wrapperStyle={{}}
                 wrapperClass=""
               />
-                <Typography variant='h3' >We are coming soon</Typography>
-               
-                <Typography>
-                  We are excited to announce the upcoming launch of our website very soon.  
-                </Typography> 
+                <Box ml={'19px'}>
+                  <Typography variant='h3' >We are coming soon</Typography>
+                  
+                  <Typography>
+                    We are excited to announce the upcoming launch of our website very soon.  
+                  </Typography> 
+                </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
             <svg
