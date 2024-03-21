@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react' 
 import { NextPageWithLayout } from '@/interfaces/layout'
-import { Box, Button, Container, Grid, TextField, Typography, useTheme } from '@mui/material'
-import { Send } from '@mui/icons-material'
+import { Box, Container, Grid, Typography } from '@mui/material' 
 import { Watch } from 'react-loader-spinner'
+import { MuiWatch } from '@/components/animations/watch'
  
 const CommingSoonPage: NextPageWithLayout = () => {
- 
-const theme  = useTheme()
-useEffect(()=>{
-
+  
+useEffect(()=>{ 
     document.addEventListener('DOMContentLoaded', function () {
         window.setTimeout(()=>{
             document.querySelector('svg')?.classList.add('animated')
@@ -19,16 +17,16 @@ useEffect(()=>{
     <Box className='TETT'>  
         <Grid container component={Container} height={'100vh'} alignItems={'center'} className=''>
             <Grid item xs={12} sm={6}>
-            <Watch
+              <MuiWatch
                 visible={true}
                 height="80"
                 width="80"
                 radius="48"
-                color={theme.palette.primary.main}
+                color={"#127C71"}
                 ariaLabel="watch-loading"
                 wrapperStyle={{}}
                 wrapperClass=""
-  />
+              />
                 <Typography variant='h3' >We are coming soon</Typography>
                
                 <Typography>
