@@ -7,14 +7,18 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Products',
-    path: 'Products', 
+    path: 'Products',
   },
   {
     label: 'Solutions',
-    path: 'Solutions', 
+    path: 'Solutions',
   },
   {
     label: 'Pricing',
-    path: 'Pricing', 
+    path: 'Pricing',
+  },
+  {
+    label: 'Contact Us',
+    path: 'contactUs',
   },
 ]

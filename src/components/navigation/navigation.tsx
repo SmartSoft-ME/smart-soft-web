@@ -21,8 +21,17 @@ const Navigation: FC<NavigationProps> = ({onCLose}) => {
     }
   }, [router.asPath, router.pathname]); 
 
-  const handleClick = (destination: string)  => {
-    if (router.pathname !== '/') {
+  const handleClick = (destination: string)  => { 
+    if(destination == "contactUs"){ 
+      router.push("/"+destination).then(()=>{
+        scroller.scrollTo("contactUs", {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+        });
+      })
+    }
+    else if (router.pathname !== '/') {
       router.push('/#' + destination);
     } else {
       scroller.scrollTo(destination, {
@@ -30,7 +39,6 @@ const Navigation: FC<NavigationProps> = ({onCLose}) => {
         delay:0,
         smooth: 'easeInOutQuart',
       });
-    
     }
     onCLose?.()
   };

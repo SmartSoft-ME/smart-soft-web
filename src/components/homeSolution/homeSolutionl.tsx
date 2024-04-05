@@ -8,6 +8,8 @@ import FormDialog from '../Popup/Popup-button'
 import Stack from '@mui/material/Stack'
 import Image from 'next/image'
 import type { HomeSolutionData } from '@/interfaces/homeSolutionData'
+import { useRouter } from 'next/router'
+import { scroller } from 'react-scroll'
 
 interface HomeHeroData {
   herodata: HomeSolutionData
@@ -16,13 +18,20 @@ interface HomeHeroData {
 const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
   
   const [dialogOpen, setDialogOpen] = useState(false)
-
+  const router = useRouter();
   const handleButtonOnClick = () => {
-    setDialogOpen(true)
+    router.push("/contactUs").then(()=>{
+      scroller.scrollTo("contactUs", {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+      });
+    })
+    // setDialogOpen(true)
   }
 
   const handleDialogClose = () => {
-    setDialogOpen(false)
+    // setDialogOpen(false)
   }
 
  
