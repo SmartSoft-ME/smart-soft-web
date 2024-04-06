@@ -51,39 +51,11 @@ function AddressSection(){
                 <svg className="mk-svg-icon" data-name="mk-moon-location-3" data-cacheid="icon-65f01c7a4ba94" style={{height:'48px',width:'48px'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 480c-88.366 0-160-71.634-160-160 0-160 160-352 160-352s160 192 160 352c0 88.366-71.635 160-160 160zm0-258c-54.124 0-98 43.876-98 98s43.876 98 98 98 98-43.876 98-98-43.876-98-98-98zm-62 98a62 62 1260 1 0 124 0 62 62 1260 1 0-124 0z" transform="scale(1 -1) translate(0 -480)"></path></svg> 
             }
         >
-         
             <Typography variant='h1'>Address</Typography>
-            
             <ItemRow 
-                title1='Weifield Group Contracting' 
-                title2='6950 S. Jordan Road' 
-                title3='Centennial, CO 80112'
-            />
-              
-            <ItemRow
-                title1='Northern Colorado Office'
-                title2='6775 Sherman Street'
-                title3='Loveland, CO 80538'
-            />
-            <ItemRow
-                title1='Southern Colorado Office'
-                title2='4474 Barnes Road'
-                title3='Colorado Springs, CO 80917'
-            />
-            <ItemRow
-                title1='Wyoming Office'
-                title2='1421 Wells Branch Pkwy. Ste 100'
-                title3='Pflugerville, TX 78660'
-            />
-            <ItemRow
-                title1='Texas Office'
-                title2='6950 S. Jordan Road'
-                title3='Centennial, CO 80112'
-            />
-            <ItemRow
-                title1='Tennessee Office'
-                title2='1125 Harpeth Industrial Ct, Suite A'
-                title3='Franklin, TN 37064'
+                title1='Lebanon' 
+                title2='Beirut Airport Road Zaarour Center' 
+                title3='Office Nb. 40'
             />
         </ContactInfo>
     )
@@ -97,23 +69,17 @@ function PhoneSection(){
             <Typography variant='h1'>Phone</Typography>
 
             <ItemRow
-                title1='Weifield Group Contracting'
-                title2='877.WEIFIELD phone'
+                title1='Support'
+                title2='+961 01 456 774'
             />
             <ItemRow
-                title1='Weifield 24/7 Service Department'
-                title2='877.WEIFIELD'
-                title3='(Then press 0 for emergency calls)'
+                title1='Information'
+                title2='+961 03 357 739'                
             />
             <ItemRow
-                title1='Northern Colorado Office'
-                title2='877.WEIFIELD phone'
-            />
-            <ItemRow
-                title1='Wyoming Office'
-                title2='877.WEIFIELD phone'
-            />
-
+                title1='Information'
+                title2='+961 70 292 605'
+            />            
         </ContactInfo>
     )
 }
@@ -130,19 +96,13 @@ function EmailSection(){
             <Typography variant='h1'>EMAIL</Typography>
 
             <ItemRow
-                title1='Request for Proposal'
-                title2='Info@weifieldgroup.com'
+                title1='Info'
+                title2='info@smartsoft-me.com'
             />
             <ItemRow
-                title1='All Bid Opportunities'
-                title2='estimating@weifieldgroup.com'
-            />
-            <ItemRow
-                title1='Electrical Service Calls'
-                title2='recruiting@weifieldgroup.com'
-            />
-        
-
+                title1='Support'
+                title2='support@smartsoft-me.com'
+            />        
         </ContactInfo>
     )
 }
