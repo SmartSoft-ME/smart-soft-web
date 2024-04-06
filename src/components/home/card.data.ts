@@ -2,17 +2,17 @@ import type { Cards } from '../../interfaces/cardsnew'
 export const data: Array<Cards> = [
   {
     id: 1,
-    title: ' Light Smarter ERP',
+    title: ' Light SmartSoft ERP',
     price: '1500$',
   },
   {
     id: 2,
-    title: 'Basic Smarter ERP',
+    title: 'Basic SmartSoft ERP',
     price: '3000$',
   },
   {
     id: 3,
-    title: 'Enterprise Smarter ERP',
+    title: 'Enterprise SmartSoft ERP',
     price: 'XXX$',
   },
 ]

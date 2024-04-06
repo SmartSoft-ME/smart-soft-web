@@ -17,7 +17,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   const isPermisePath = router.pathname.includes('onPremise')
   const isHybridPath = router.pathname.includes('hybrid')
 
-  let logoText = 'Smarter ERP'
+  let logoText = 'SmartSoft ERP'
   if (isInventoryPath) {
     logoText = 'Smart Inventory'
   } else if (isAccountingPath) {
@@ -33,15 +33,15 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   }
   return (
     <Box onClick={onClick} sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-      {logoText === 'Smarter ERP' ? (
+      {logoText === 'SmartSoft ERP' ? (
       
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/images/logo/smarter-erp-logo.png"
+          src="/images/logo/new-logo.jpg"
           alt="Main Page Logo"
-          width={300} 
-          height={100} 
-          style={{objectFit : 'cover'}}
+          width={400} 
+          height={200} 
+          style={{objectFit : 'scale-down'}}
         />
       ) : (
         <Typography
