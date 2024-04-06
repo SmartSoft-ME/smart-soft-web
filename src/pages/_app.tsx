@@ -25,7 +25,8 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   // Use the layout defined at the page level, if available
-  const getLayout : any = process.env.NODE_ENV === 'development' ? Component.getLayout || ((page : any) => page) : CommingSoonPage // Component.getLayout || ((page) => page)
+  // const getLayout : any = process.env.NODE_ENV === 'development' ? Component.getLayout || ((page : any) => page) : CommingSoonPage // Component.getLayout || ((page) => page)
+  const getLayout : any =  Component.getLayout || ((page : any) => page)
 
   return (
     <CacheProvider value={emotionCache}>
