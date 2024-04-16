@@ -56,14 +56,15 @@ const SolutionItem: FC<Props> = ({ item }) => {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box sx={{ width: '90%', height: '80%', position: 'relative' }}>
+        <Box sx={{ width: '100%', height: '100%', position: 'relative' }}>
           <Image 
             src={item.image} 
             alt={item.title} 
             layout="responsive" 
             width={520} 
-            height={400} 
+            height={350} 
             quality={97} 
+            objectFit='cover'
           />
         </Box>
       </Grid>

@@ -36,7 +36,7 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
 
  
   return (
-    <Box id="/" sx={{backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="/" sx={{backgroundColor: 'background.paper', position: 'relative', pb: { xs: 8, md: 10 }, pt: { xs: 8, md: 13.5 } }}>
       <Container maxWidth="lg">
         <Grid container spacing={3} sx={{ flexDirection: { xs: 'column', md: 'unset' }}}>
           <Grid item xs={12} md={7} >
@@ -81,10 +81,10 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
               <Image
                 src={herodata.image}
                 width={1000}
-                height={1250}
-                alt="Hero img"
-                
+                height={1000}
+                alt="Hero img" 
                 style={{ borderRadius: '50px' }}
+                objectFit='cover'
               />
             </Box>
           </Grid>
