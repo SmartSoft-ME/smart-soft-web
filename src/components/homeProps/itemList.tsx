@@ -33,7 +33,8 @@ const ItemList: FC<ItemListProps> = ({ onSelect , items }) => {
       border: '1px solid #ddd', 
       boxShadow: '5px 5px 10px #ccc',
       borderRadius: '4px', 
-      zIndex: 0, 
+      zIndex: 0,  
+      height : 'fit-content'
     }}
   >
       <nav aria-label="main mailbox folders">
