@@ -39,7 +39,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
         <img
           src="/images/logo/new-logo.jpg"
           alt="Main Page Logo"
-          width={400} 
+          width={300} 
           height={200} 
           style={{objectFit : 'scale-down'}}
         />
