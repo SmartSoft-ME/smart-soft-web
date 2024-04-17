@@ -15,7 +15,7 @@ const detailsItems: FC<DetailItemProps> = ({data}) => {
       <Typography variant="h5" gutterBottom sx={{ mt: '4px' }}>
         {data.Description}
       </Typography>
-      <Image src={data.image} alt="Hero img" objectFit='cover' width={300} height={300} />
+      <Image src={data.image} alt="Hero img" objectFit='cover' width={'100%'} height={350} />
     </Container>
   )
 }

@@ -27,7 +27,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
   } else if (isSaasPath) {
     logoText = 'SaaS ERP'
   } else if (isPermisePath) {
-    logoText = 'OnPremise ERP'
+    logoText = 'On-premise ERP'
   } else if (isHybridPath) {
     logoText = 'Hybrid ERP'
   }

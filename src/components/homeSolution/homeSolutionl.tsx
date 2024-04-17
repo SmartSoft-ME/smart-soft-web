@@ -36,7 +36,7 @@ const HomeHeroSolution: FC<HomeHeroData> = ({ herodata }) => {
 
  
   return (
-    <Box id="/" sx={{backgroundColor: 'background.paper', position: 'relative', pb: { xs: 8, md: 10 }, pt: { xs: 8, md: 13.5 } }}>
+    <Box className='flex-fill'  id="/" sx={{backgroundColor: 'background.paper', position: 'relative', pb: { xs: 8, md: 10 }, pt: { xs: 8, md: 13.5 } }} >
       <Container maxWidth="lg">
         <Grid container spacing={3} sx={{ flexDirection: { xs: 'column', md: 'unset' }}}>
           <Grid item xs={12} md={7} >

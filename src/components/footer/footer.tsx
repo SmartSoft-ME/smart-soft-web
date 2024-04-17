@@ -14,7 +14,7 @@ const Footer: FC = () => {
     >
       <Container>
         <Grid container spacing={1}>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
               SmartSoft ERP              </Typography>
@@ -24,7 +24,7 @@ const Footer: FC = () => {
               <FooterSocialLinks />
             </Box>
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={4}>
             <FooterNavigation />
           </Grid>
         </Grid>

@@ -141,3 +141,19 @@ svg#freepik_stories-create.animated #freepik--Trucks--inject-2 {
  }
 
  /*https://bgjar.com/polygon-luminary*/
+
+ body {
+  min-height:100vh;
+}
+
+.flex-fill {
+  flex:1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+#__next > main{
+  display: flex;
+  flex-direction : column; 
+  min-height: 100vh;
+}

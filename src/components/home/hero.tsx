@@ -133,12 +133,7 @@ const HomeHero: FC = () => {
                   }
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 }, mt: { xs: 2, md: 0 } }}>
-                <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained">
-                    Get Started
-                  </StyledButton>
-                </ScrollLink>
+              <Box sx={{ '& button': { mr: 2 }, mt: { xs: 2, md: 0 } }}> 
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                 <StyledButton
                     color="primary"

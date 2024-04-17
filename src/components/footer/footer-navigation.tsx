@@ -108,12 +108,12 @@ const FooterNavigation: FC = () => {
           <NavigationItem key={index + path} label={label} path={path} openDialog={openDialog} />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      {/* <Grid item xs={12} md={4}>
         <FooterSectionTitle title="About" />
         {companyMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} openDialog={openDialog}/>
         ))}
-      </Grid>
+      </Grid> */}
       <FormDialog open={dialogOpen} onClose={closeDialog} />
     </Grid>
   )
