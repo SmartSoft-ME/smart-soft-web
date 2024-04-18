@@ -37,7 +37,7 @@ const Logo: FC<LogoProps> = ({ onClick, variant }) => {
       
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/images/logo/new-logo.jpg"
+          src="/images/logo/smartsoft-logo.png"
           alt="Main Page Logo"
           width={300} 
           height={200} 
