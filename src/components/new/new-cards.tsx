@@ -31,9 +31,9 @@ const NewCardItem: FC<Props>=({ item })=>{
             {item.title}
           </Typography>
           {/* <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.price}</Typography> */}
-           <Typography sx={{fontSize: '1.4rem', mb: 2, color: 'red' }} variant="subtitle1">
+           {item.price && <Typography sx={{fontSize: '1.4rem', mb: 2, color: 'red' }} variant="subtitle1">
             {item.price}
-          </Typography> 
+          </Typography> }
         </Box>
       </Box>
     </Box>
