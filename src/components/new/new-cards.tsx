@@ -24,9 +24,10 @@ const NewCardItem: FC<Props>=({ item })=>{
           '&:hover': {
             boxShadow: 2,
           },
+          textAlign : 'center'
         }}
       >
-        <Box sx={{ mb:2 }}>
+        <Box sx={{ mb:.5 }}>
           <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>
             {item.title}
           </Typography>
